@@ -29,18 +29,14 @@ a{
     color:inherit;
 }
 
-img{
-    display:block;
-    max-width:100%;
-}
-
 :root{
-    --black:#05090a;
-    --dark:#071214;
+    --bg:#05090a;
+    --dark:#081315;
     --dark2:#0b191b;
     --teal:#0fd1d2;
-    --teal2:#35f4ef;
-    --gray:#9eadaf;
+    --teal-light:#35f4ef;
+    --text:#eaf4f4;
+    --muted:#91a5a7;
 }
 
 
@@ -51,18 +47,18 @@ header{
     top:0;
     left:0;
     width:100%;
-    z-index:9999;
+    z-index:1000;
 
-    background:rgba(5,9,10,.84);
+    background:rgba(5,9,10,.88);
     backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(15,209,210,.16);
+    border-bottom:1px solid rgba(15,209,210,.15);
 }
 
 .navbar{
     width:92%;
     max-width:1400px;
-    height:95px;
+    height:92px;
     margin:auto;
 
     display:flex;
@@ -71,7 +67,7 @@ header{
 }
 
 .logo img{
-    width:220px;
+    width:230px;
     height:auto;
 }
 
@@ -82,9 +78,9 @@ header{
 }
 
 .nav-menu a{
-    color:#dce6e7;
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
+    color:#d9e5e6;
     transition:.3s;
 }
 
@@ -93,8 +89,8 @@ header{
 }
 
 .nav-contact{
-    padding:12px 22px;
     border:1px solid var(--teal);
+    padding:12px 22px;
     border-radius:30px;
     color:var(--teal)!important;
 }
@@ -111,17 +107,18 @@ header{
     min-height:100vh;
     padding:135px 5% 80px;
 
-    position:relative;
     display:flex;
     align-items:center;
 
+    position:relative;
+
     background:
-        radial-gradient(
-            circle at 15% 50%,
-            rgba(15,209,210,.13),
-            transparent 32%
-        ),
-        #05090a;
+    radial-gradient(
+        circle at 15% 50%,
+        rgba(15,209,210,.13),
+        transparent 32%
+    ),
+    #05090a;
 }
 
 .hero-container{
@@ -132,14 +129,15 @@ header{
     display:grid;
     grid-template-columns:42% 58%;
     align-items:center;
+
     gap:50px;
 }
 
 .hero-small{
     color:var(--teal);
     font-size:12px;
-    font-weight:bold;
     letter-spacing:4px;
+    font-weight:bold;
     margin-bottom:25px;
 }
 
@@ -155,9 +153,9 @@ header{
 }
 
 .hero-description{
-    max-width:520px;
-    color:var(--gray);
-    font-size:17px;
+    max-width:530px;
+    color:var(--muted);
+    font-size:16px;
     line-height:1.8;
     margin-bottom:35px;
 }
@@ -184,11 +182,11 @@ header{
 
 .btn-main:hover{
     transform:translateY(-3px);
-    box-shadow:0 10px 35px rgba(15,209,210,.35);
+    box-shadow:0 12px 35px rgba(15,209,210,.35);
 }
 
 .btn-border{
-    border:1px solid rgba(15,209,210,.5);
+    border:1px solid rgba(15,209,210,.55);
     color:var(--teal);
 }
 
@@ -236,7 +234,7 @@ header{
     bottom:-40px;
 
     background:#0fd1d2;
-    opacity:.15;
+    opacity:.18;
 
     filter:blur(90px);
     border-radius:50%;
@@ -246,23 +244,21 @@ header{
 
 .hero-image-box{
     position:relative;
-    z-index:2;
-
     padding:10px;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(15,209,210,.20),
-            rgba(5,9,10,.92)
-        );
+    linear-gradient(
+        145deg,
+        rgba(15,209,210,.20),
+        rgba(5,9,10,.92)
+    );
 
     border:1px solid rgba(15,209,210,.45);
     border-radius:22px;
 
     box-shadow:
-        0 35px 90px rgba(0,0,0,.65),
-        0 0 45px rgba(15,209,210,.16);
+    0 35px 90px rgba(0,0,0,.65),
+    0 0 45px rgba(15,209,210,.16);
 }
 
 .hero-image-box img{
@@ -321,7 +317,9 @@ header{
 
 .marquee span{
     margin:0 35px;
+
     color:#8fa5a7;
+
     font-size:12px;
     font-weight:bold;
     letter-spacing:3px;
@@ -343,11 +341,11 @@ header{
     padding:130px 6%;
 
     background:
-        linear-gradient(
-            180deg,
-            #071113,
-            #05090a
-        );
+    linear-gradient(
+        180deg,
+        #071113,
+        #05090a
+    );
 }
 
 .about-container{
@@ -356,7 +354,9 @@ header{
 
     display:grid;
     grid-template-columns:48% 52%;
+
     align-items:center;
+
     gap:80px;
 }
 
@@ -366,6 +366,7 @@ header{
 
 .about-image::before{
     content:"";
+
     position:absolute;
 
     left:-20px;
@@ -375,11 +376,13 @@ header{
     height:100%;
 
     border:1px solid rgba(15,209,210,.28);
+
     border-radius:18px;
 }
 
 .about-image::after{
     content:"";
+
     position:absolute;
 
     width:300px;
@@ -392,6 +395,7 @@ header{
     opacity:.14;
 
     filter:blur(90px);
+
     border-radius:50%;
 
     z-index:0;
@@ -407,6 +411,7 @@ header{
     object-fit:cover;
 
     border-radius:15px;
+
     border:1px solid rgba(15,209,210,.35);
 
     box-shadow:0 25px 70px rgba(0,0,0,.5);
@@ -414,14 +419,18 @@ header{
 
 .about-text small{
     color:var(--teal);
+
     font-size:11px;
+
     font-weight:bold;
+
     letter-spacing:4px;
 }
 
 .about-text h2{
     font-size:52px;
     line-height:1;
+
     margin:18px 0 25px;
 }
 
@@ -430,9 +439,12 @@ header{
 }
 
 .about-text p{
-    color:var(--gray);
+    color:var(--muted);
+
     font-size:15px;
+
     line-height:1.9;
+
     margin-bottom:17px;
 }
 
@@ -440,7 +452,9 @@ header{
     margin-top:30px;
 
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:15px;
 }
 
@@ -450,39 +464,50 @@ header{
     background:rgba(15,209,210,.035);
 
     border:1px solid rgba(15,209,210,.15);
+
     border-radius:8px;
 }
 
 .point strong{
     display:block;
+
     color:var(--teal);
+
     font-size:13px;
+
     margin-bottom:7px;
 }
 
 .point p{
     margin:0;
+
     font-size:12px;
 }
 
 
-/* ================= SECTION HEAD ================= */
+/* ================= SECTION TITLE ================= */
 
 .section-head{
     max-width:700px;
+
     margin:0 auto 65px;
+
     text-align:center;
 }
 
 .section-head small{
     color:var(--teal);
+
     font-size:11px;
+
     font-weight:bold;
+
     letter-spacing:4px;
 }
 
 .section-head h2{
     font-size:50px;
+
     margin:15px 0;
 }
 
@@ -491,7 +516,8 @@ header{
 }
 
 .section-head p{
-    color:var(--gray);
+    color:var(--muted);
+
     line-height:1.8;
 }
 
@@ -500,15 +526,19 @@ header{
 
 .services{
     padding:130px 6%;
+
     background:#05090a;
 }
 
 .services-grid{
     max-width:1300px;
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     gap:18px;
 }
 
@@ -518,16 +548,18 @@ header{
     padding:30px;
 
     position:relative;
+
     overflow:hidden;
 
     background:
-        linear-gradient(
-            145deg,
-            #0d1d20,
-            #071012
-        );
+    linear-gradient(
+        145deg,
+        #0d1d20,
+        #071012
+    );
 
     border:1px solid rgba(15,209,210,.16);
+
     border-radius:12px;
 
     transition:.4s;
@@ -535,6 +567,7 @@ header{
 
 .service::before{
     content:"";
+
     position:absolute;
 
     width:180px;
@@ -544,9 +577,11 @@ header{
     top:-80px;
 
     background:var(--teal);
+
     opacity:.06;
 
     filter:blur(50px);
+
     border-radius:50%;
 }
 
@@ -556,13 +591,15 @@ header{
     border-color:rgba(15,209,210,.6);
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,.45),
-        0 0 35px rgba(15,209,210,.08);
+    0 25px 60px rgba(0,0,0,.45),
+    0 0 35px rgba(15,209,210,.08);
 }
 
 .service-number{
     color:rgba(15,209,210,.5);
+
     font-size:11px;
+
     letter-spacing:2px;
 }
 
@@ -573,24 +610,30 @@ header{
     margin:40px 0 25px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     border:1px solid rgba(15,209,210,.3);
+
     border-radius:10px;
 
     color:var(--teal);
+
     font-size:21px;
 }
 
 .service h3{
     font-size:19px;
+
     margin-bottom:12px;
 }
 
 .service p{
-    color:var(--gray);
+    color:var(--muted);
+
     font-size:13px;
+
     line-height:1.7;
 }
 
@@ -603,14 +646,17 @@ header{
     background:#081416;
 
     border-top:1px solid rgba(15,209,210,.12);
+
     border-bottom:1px solid rgba(15,209,210,.12);
 }
 
 .numbers-grid{
     max-width:1100px;
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
 
     text-align:center;
@@ -618,6 +664,7 @@ header{
 
 .number{
     padding:15px;
+
     border-right:1px solid rgba(255,255,255,.08);
 }
 
@@ -627,13 +674,17 @@ header{
 
 .number strong{
     display:block;
+
     color:var(--teal);
+
     font-size:42px;
+
     margin-bottom:5px;
 }
 
 .number span{
-    color:var(--gray);
+    color:var(--muted);
+
     font-size:11px;
 }
 
@@ -642,20 +693,25 @@ header{
 
 .process{
     padding:130px 6%;
+
     background:#05090a;
 }
 
 .process-grid{
     max-width:1100px;
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
 }
 
 .process-item{
     text-align:center;
+
     padding:25px;
+
     position:relative;
 }
 
@@ -665,6 +721,7 @@ header{
     position:absolute;
 
     right:-10px;
+
     top:60px;
 
     width:20px;
@@ -680,6 +737,7 @@ header{
     margin:0 auto 25px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -694,12 +752,15 @@ header{
 
 .process-item h3{
     margin-bottom:10px;
+
     font-size:15px;
 }
 
 .process-item p{
-    color:var(--gray);
+    color:var(--muted);
+
     font-size:12px;
+
     line-height:1.7;
 }
 
@@ -710,47 +771,51 @@ header{
     padding:130px 6%;
 
     background:
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(15,209,210,.08),
-            transparent 45%
-        ),
-        #071012;
+    radial-gradient(
+        circle at 50% 30%,
+        rgba(15,209,210,.08),
+        transparent 45%
+    ),
+    #071012;
 }
 
 .portfolio-box{
     max-width:1250px;
-    min-height:420px;
+
+    min-height:430px;
 
     margin:auto;
 
     display:flex;
+
     flex-direction:column;
 
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
 
     padding:60px 30px;
 
+    position:relative;
+
+    overflow:hidden;
+
     border:1px solid rgba(15,209,210,.25);
 
     border-radius:20px;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(15,209,210,.06),
-            rgba(5,9,10,.8)
-        );
+    linear-gradient(
+        145deg,
+        rgba(15,209,210,.06),
+        rgba(5,9,10,.8)
+    );
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.45),
-        inset 0 0 60px rgba(15,209,210,.025);
-
-    position:relative;
-    overflow:hidden;
+    0 30px 80px rgba(0,0,0,.45),
+    inset 0 0 60px rgba(15,209,210,.025);
 }
 
 .portfolio-box::before{
@@ -798,6 +863,7 @@ header{
     height:80px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -811,8 +877,7 @@ header{
 
     margin-bottom:25px;
 
-    box-shadow:
-        0 0 35px rgba(15,209,210,.08);
+    box-shadow:0 0 35px rgba(15,209,210,.08);
 }
 
 .portfolio-box h3{
@@ -821,6 +886,7 @@ header{
     margin-bottom:15px;
 
     position:relative;
+
     z-index:2;
 }
 
@@ -831,7 +897,7 @@ header{
 .portfolio-box p{
     max-width:600px;
 
-    color:var(--gray);
+    color:var(--muted);
 
     font-size:14px;
 
@@ -840,6 +906,7 @@ header{
     margin-bottom:30px;
 
     position:relative;
+
     z-index:2;
 }
 
@@ -851,119 +918,253 @@ header{
     letter-spacing:3px;
 
     position:relative;
+
     z-index:2;
 }
 
 
-/* ================= CONTACT ================= */
+/* ================= CONTACT US ================= */
 
 .contact{
     padding:120px 6%;
 
+    position:relative;
+
     background:
-        radial-gradient(
-            circle at center,
-            rgba(15,209,210,.12),
-            transparent 45%
-        ),
-        #071012;
+    radial-gradient(
+        circle at 15% 50%,
+        rgba(15,209,210,.12),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 85% 50%,
+        rgba(15,209,210,.08),
+        transparent 30%
+    ),
+    #05090a;
 }
 
-.contact-container{
-    max-width:1200px;
+.contact::before{
+    content:"";
+
+    position:absolute;
+
+    left:5%;
+    right:5%;
+    top:0;
+
+    height:1px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(15,209,210,.5),
+        transparent
+    );
+}
+
+.contact-wrapper{
+    max-width:1250px;
+
     margin:auto;
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
+    padding:65px;
 
-    gap:50px;
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid rgba(15,209,210,.25);
+
+    border-radius:24px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(15,209,210,.08),
+        rgba(8,19,21,.95)
+    );
+
+    box-shadow:
+    0 30px 90px rgba(0,0,0,.5),
+    0 0 70px rgba(15,209,210,.06);
+}
+
+.contact-wrapper::before{
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    right:-180px;
+    top:-200px;
+
+    background:var(--teal);
+
+    opacity:.10;
+
+    filter:blur(110px);
+
+    border-radius:50%;
+}
+
+.contact-wrapper::after{
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    left:-150px;
+    bottom:-180px;
+
+    background:var(--teal);
+
+    opacity:.08;
+
+    filter:blur(100px);
+
+    border-radius:50%;
+}
+
+.contact-top{
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:70px;
 
     align-items:center;
 }
 
-.contact-text small{
+.contact-left small{
     color:var(--teal);
-    letter-spacing:4px;
+
     font-size:11px;
+
     font-weight:bold;
+
+    letter-spacing:5px;
 }
 
-.contact-text h2{
-    font-size:55px;
-    line-height:1;
-    margin:18px 0 25px;
+.contact-left h2{
+    font-size:clamp(45px,6vw,78px);
+
+    line-height:.9;
+
+    letter-spacing:-3px;
+
+    margin:20px 0 25px;
 }
 
-.contact-text h2 span{
+.contact-left h2 span{
     color:var(--teal);
 }
 
-.contact-text > p{
-    color:var(--gray);
+.contact-left p{
+    max-width:550px;
 
-    max-width:500px;
+    color:var(--muted);
+
+    font-size:15px;
 
     line-height:1.8;
 
     margin-bottom:30px;
 }
 
-.contact-info{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.contact-details{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
 }
 
-.contact-item{
-    padding:18px 20px;
+.contact-detail{
+    padding:18px;
 
-    background:rgba(15,209,210,.04);
+    background:rgba(0,0,0,.18);
 
-    border:1px solid rgba(15,209,210,.15);
+    border:1px solid rgba(15,209,210,.14);
 
-    border-radius:8px;
-
-    color:#d8e5e6;
-
-    font-size:14px;
+    border-radius:10px;
 }
 
-.contact-item strong{
+.contact-detail span{
     display:block;
+
+    color:#708587;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    margin-bottom:7px;
+}
+
+.contact-detail strong{
+    color:#dce8e9;
+
+    font-size:13px;
+
+    font-weight:normal;
+}
+
+.contact-right{
+    position:relative;
+
+    z-index:2;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    background:rgba(3,9,10,.65);
+
+    border:1px solid rgba(15,209,210,.2);
+
+    box-shadow:inset 0 0 40px rgba(15,209,210,.025);
+}
+
+.contact-right .circle{
+    width:65px;
+    height:65px;
+
+    margin-bottom:25px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:1px solid rgba(15,209,210,.5);
 
     color:var(--teal);
 
-    font-size:11px;
+    font-size:24px;
 
-    margin-bottom:5px;
-
-    letter-spacing:1px;
+    box-shadow:0 0 30px rgba(15,209,210,.1);
 }
 
-.contact-card{
-    padding:45px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0c1c1f,
-            #071012
-        );
-
-    border:1px solid rgba(15,209,210,.3);
-
-    border-radius:15px;
-
-    box-shadow:0 25px 70px rgba(0,0,0,.45);
-}
-
-.contact-card h3{
+.contact-right h3{
     font-size:25px;
-    margin-bottom:25px;
+
+    margin-bottom:12px;
 }
 
-.contact-card p{
-    color:var(--gray);
+.contact-right p{
+    color:var(--muted);
 
     font-size:13px;
 
@@ -972,11 +1173,19 @@ header{
     margin-bottom:25px;
 }
 
+.contact-actions{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
 
 /* ================= FOOTER ================= */
 
 footer{
-    padding:70px 6% 25px;
+    padding:65px 6% 25px;
 
     background:#030607;
 
@@ -997,13 +1206,14 @@ footer{
 
 .footer-logo{
     width:220px;
+
     margin-bottom:20px;
 }
 
 .footer-about{
     max-width:350px;
 
-    color:var(--gray);
+    color:var(--muted);
 
     font-size:13px;
 
@@ -1012,6 +1222,8 @@ footer{
 
 .footer-col h4{
     margin-bottom:18px;
+
+    font-size:13px;
 }
 
 .footer-col a,
@@ -1073,7 +1285,9 @@ footer{
 
     .hero-image{
         max-width:850px;
+
         width:100%;
+
         margin:auto;
     }
 
@@ -1105,7 +1319,7 @@ footer{
         display:none;
     }
 
-    .contact-container{
+    .contact-top{
         grid-template-columns:1fr;
     }
 
@@ -1124,7 +1338,7 @@ footer{
     }
 
     .logo img{
-        width:180px;
+        width:175px;
     }
 
     .nav-menu{
@@ -1145,6 +1359,7 @@ footer{
 
     .hero h1{
         font-size:54px;
+
         letter-spacing:-3px;
     }
 
@@ -1208,6 +1423,7 @@ footer{
 
     .portfolio-box{
         min-height:350px;
+
         padding:45px 20px;
     }
 
@@ -1216,15 +1432,27 @@ footer{
     }
 
     .contact{
-        padding:85px 20px;
+        padding:80px 20px;
     }
 
-    .contact-text h2{
-        font-size:42px;
+    .contact-wrapper{
+        padding:35px 20px;
+
+        border-radius:18px;
     }
 
-    .contact-card{
-        padding:30px 22px;
+    .contact-left h2{
+        font-size:48px;
+
+        letter-spacing:-2px;
+    }
+
+    .contact-details{
+        grid-template-columns:1fr;
+    }
+
+    .contact-right{
+        padding:28px 22px;
     }
 
     .footer-grid{
@@ -1237,6 +1465,7 @@ footer{
 
     .footer-bottom{
         flex-direction:column;
+
         gap:10px;
     }
 }
@@ -1254,25 +1483,25 @@ footer{
 
 <div class="navbar">
 
-    <a href="#home" class="logo">
-        <img src="logo.png" alt="VisionCraft Logo">
-    </a>
+<a href="#home" class="logo">
+<img src="logo.png" alt="VisionCraft Logo">
+</a>
 
-    <nav class="nav-menu">
+<nav class="nav-menu">
 
-        <a href="#home">HOME</a>
+<a href="#home">HOME</a>
 
-        <a href="#about">ABOUT</a>
+<a href="#about">ABOUT</a>
 
-        <a href="#services">SERVICES</a>
+<a href="#services">SERVICES</a>
 
-        <a href="#portfolio">PORTFOLIO</a>
+<a href="#portfolio">PORTFOLIO</a>
 
-        <a href="#contact" class="nav-contact">
-            LET'S TALK
-        </a>
+<a href="#contact" class="nav-contact">
+LET'S TALK
+</a>
 
-    </nav>
+</nav>
 
 </div>
 
@@ -1285,63 +1514,63 @@ footer{
 
 <div class="hero-container">
 
-    <div class="hero-text">
+<div class="hero-text">
 
-        <div class="hero-small">
-            VISIONCRAFT / CREATIVE STUDIO
-        </div>
+<div class="hero-small">
+VISIONCRAFT / CREATIVE STUDIO
+</div>
 
-        <h1>
-            CREATE.<br>
-            DESIGN.<br>
-            <span>IMPACT.</span>
-        </h1>
+<h1>
+CREATE.<br>
+DESIGN.<br>
+<span>IMPACT.</span>
+</h1>
 
-        <p class="hero-description">
-            We transform ideas into powerful exhibition
-            experiences, 3D visualizations, branding and
-            digital content that make brands stand out.
-        </p>
+<p class="hero-description">
+We transform ideas into powerful exhibition experiences,
+3D visualizations, branding and digital content that
+make brands stand out.
+</p>
 
-        <div class="hero-buttons">
+<div class="hero-buttons">
 
-            <a href="#contact" class="btn btn-main">
-                START A PROJECT →
-            </a>
+<a href="#contact" class="btn btn-main">
+START A PROJECT →
+</a>
 
-            <a href="#portfolio" class="btn btn-border">
-                VIEW PORTFOLIO
-            </a>
+<a href="#portfolio" class="btn btn-border">
+VIEW PORTFOLIO
+</a>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 
-    <div class="hero-image">
+<div class="hero-image">
 
-        <div class="hero-image-box">
+<div class="hero-image-box">
 
-            <img
-                src="banner.jpg"
-                alt="VisionCraft Exhibition Design"
-            >
+<img
+src="banner.jpg"
+alt="VisionCraft Exhibition Design"
+>
 
-            <div class="hero-label">
+<div class="hero-label">
 
-                <strong>
-                    EXHIBITION EXPERIENCE
-                </strong>
+<strong>
+EXHIBITION EXPERIENCE
+</strong>
 
-                <small>
-                    CONCEPT • 3D • BRANDING • EXECUTION
-                </small>
+<small>
+CONCEPT • 3D • BRANDING • EXECUTION
+</small>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </div>
 
@@ -1354,17 +1583,17 @@ footer{
 
 <div class="marquee-track">
 
-    <span>EXHIBITION <b>✦</b></span>
-    <span>3D VISUALIZATION <b>✦</b></span>
-    <span>EVENT BRANDING <b>✦</b></span>
-    <span>GRAPHIC DESIGN <b>✦</b></span>
-    <span>VIDEO EDITING <b>✦</b></span>
+<span>EXHIBITION <b>✦</b></span>
+<span>3D VISUALIZATION <b>✦</b></span>
+<span>EVENT BRANDING <b>✦</b></span>
+<span>GRAPHIC DESIGN <b>✦</b></span>
+<span>VIDEO EDITING <b>✦</b></span>
 
-    <span>EXHIBITION <b>✦</b></span>
-    <span>3D VISUALIZATION <b>✦</b></span>
-    <span>EVENT BRANDING <b>✦</b></span>
-    <span>GRAPHIC DESIGN <b>✦</b></span>
-    <span>VIDEO EDITING <b>✦</b></span>
+<span>EXHIBITION <b>✦</b></span>
+<span>3D VISUALIZATION <b>✦</b></span>
+<span>EVENT BRANDING <b>✦</b></span>
+<span>GRAPHIC DESIGN <b>✦</b></span>
+<span>VIDEO EDITING <b>✦</b></span>
 
 </div>
 
@@ -1377,65 +1606,64 @@ footer{
 
 <div class="about-container">
 
-    <div class="about-image">
+<div class="about-image">
 
-        <img
-            src="about.jpg"
-            alt="VisionCraft About"
-        >
+<img
+src="about.jpg"
+alt="VisionCraft About"
+>
 
-    </div>
+</div>
 
 
-    <div class="about-text">
+<div class="about-text">
 
-        <small>
-            ABOUT VISIONCRAFT
-        </small>
+<small>
+ABOUT VISIONCRAFT
+</small>
 
-        <h2>
-            WE BUILD<br>
-            <span>VISUAL EXPERIENCES.</span>
-        </h2>
+<h2>
+WE BUILD<br>
+<span>VISUAL EXPERIENCES.</span>
+</h2>
 
-        <p>
-            VisionCraft is a creative studio focused on
-            exhibition stall design, 3D visualization,
-            event branding, video editing and graphic design.
-        </p>
+<p>
+VisionCraft is a creative studio focused on exhibition
+stall design, 3D visualization, event branding,
+video editing and graphic design.
+</p>
 
-        <p>
-            Our approach combines creativity, visual
-            storytelling and practical design to create
-            experiences that attract attention and help
-            brands connect with their audience.
-        </p>
+<p>
+Our approach combines creativity, visual storytelling
+and practical design to create experiences that attract
+attention and help brands connect with their audience.
+</p>
 
-        <div class="about-points">
+<div class="about-points">
 
-            <div class="point">
-                <strong>CREATIVE</strong>
-                <p>Fresh ideas built around your brand.</p>
-            </div>
+<div class="point">
+<strong>CREATIVE</strong>
+<p>Fresh ideas built around your brand.</p>
+</div>
 
-            <div class="point">
-                <strong>PREMIUM</strong>
-                <p>Clean and professional visual execution.</p>
-            </div>
+<div class="point">
+<strong>PREMIUM</strong>
+<p>Clean and professional visual execution.</p>
+</div>
 
-            <div class="point">
-                <strong>VISUAL</strong>
-                <p>Powerful 3D and graphic presentation.</p>
-            </div>
+<div class="point">
+<strong>VISUAL</strong>
+<p>Powerful 3D and graphic presentation.</p>
+</div>
 
-            <div class="point">
-                <strong>IMPACT</strong>
-                <p>Designs created to be remembered.</p>
-            </div>
+<div class="point">
+<strong>IMPACT</strong>
+<p>Designs created to be remembered.</p>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </div>
 
@@ -1448,16 +1676,16 @@ footer{
 
 <div class="section-head">
 
-    <small>WHAT WE DO</small>
+<small>WHAT WE DO</small>
 
-    <h2>
-        OUR <span>SERVICES</span>
-    </h2>
+<h2>
+OUR <span>SERVICES</span>
+</h2>
 
-    <p>
-        Creative solutions designed to make your brand
-        look stronger, communicate better and stand out.
-    </p>
+<p>
+Creative solutions designed to make your brand
+look stronger, communicate better and stand out.
+</p>
 
 </div>
 
@@ -1465,80 +1693,77 @@ footer{
 <div class="services-grid">
 
 
-    <div class="service">
+<div class="service">
 
-        <div class="service-number">01 / 04</div>
+<div class="service-number">01 / 04</div>
 
-        <div class="service-icon">◈</div>
+<div class="service-icon">◈</div>
 
-        <h3>
-            Exhibition Design
-        </h3>
+<h3>
+Exhibition Design
+</h3>
 
-        <p>
-            Innovative stall concepts and exhibition
-            environments designed to attract visitors
-            and create a strong brand presence.
-        </p>
+<p>
+Innovative stall concepts and exhibition environments
+designed to attract visitors and create a strong
+brand presence.
+</p>
 
-    </div>
-
-
-    <div class="service">
-
-        <div class="service-number">02 / 04</div>
-
-        <div class="service-icon">◇</div>
-
-        <h3>
-            3D Visualization
-        </h3>
-
-        <p>
-            Detailed 3D concepts and realistic renders
-            that help you visualize the final exhibition
-            before execution.
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="service">
+<div class="service">
 
-        <div class="service-number">03 / 04</div>
+<div class="service-number">02 / 04</div>
 
-        <div class="service-icon">▶</div>
+<div class="service-icon">◇</div>
 
-        <h3>
-            Video Editing
-        </h3>
+<h3>
+3D Visualization
+</h3>
 
-        <p>
-            Corporate, event and promotional videos
-            edited with strong storytelling and
-            professional visual presentation.
-        </p>
+<p>
+Detailed 3D concepts and realistic renders that help
+you visualize the final exhibition before execution.
+</p>
 
-    </div>
+</div>
 
 
-    <div class="service">
+<div class="service">
 
-        <div class="service-number">04 / 04</div>
+<div class="service-number">03 / 04</div>
 
-        <div class="service-icon">✦</div>
+<div class="service-icon">▶</div>
 
-        <h3>
-            Graphic Design
-        </h3>
+<h3>
+Video Editing
+</h3>
 
-        <p>
-            Logos, branding, promotional graphics and
-            visual communication designed to match
-            your brand identity.
-        </p>
+<p>
+Corporate, event and promotional videos edited with
+strong storytelling and professional visual presentation.
+</p>
 
-    </div>
+</div>
+
+
+<div class="service">
+
+<div class="service-number">04 / 04</div>
+
+<div class="service-icon">✦</div>
+
+<h3>
+Graphic Design
+</h3>
+
+<p>
+Logos, branding, promotional graphics and visual
+communication designed to match your brand identity.
+</p>
+
+</div>
 
 </div>
 
@@ -1551,25 +1776,25 @@ footer{
 
 <div class="numbers-grid">
 
-    <div class="number">
-        <strong>3D</strong>
-        <span>VISUALIZATION</span>
-    </div>
+<div class="number">
+<strong>3D</strong>
+<span>VISUALIZATION</span>
+</div>
 
-    <div class="number">
-        <strong>360°</strong>
-        <span>BRAND EXPERIENCE</span>
-    </div>
+<div class="number">
+<strong>360°</strong>
+<span>BRAND EXPERIENCE</span>
+</div>
 
-    <div class="number">
-        <strong>100%</strong>
-        <span>CREATIVE FOCUS</span>
-    </div>
+<div class="number">
+<strong>100%</strong>
+<span>CREATIVE FOCUS</span>
+</div>
 
-    <div class="number">
-        <strong>01</strong>
-        <span>CREATIVE PARTNER</span>
-    </div>
+<div class="number">
+<strong>01</strong>
+<span>CREATIVE PARTNER</span>
+</div>
 
 </div>
 
@@ -1578,80 +1803,88 @@ footer{
 
 <!-- ================= PROCESS ================= -->
 
-<section class="process" id="process">
+<section class="process">
 
 <div class="section-head">
 
-    <small>OUR PROCESS</small>
+<small>OUR PROCESS</small>
 
-    <h2>
-        IDEA TO <span>IMPACT</span>
-    </h2>
+<h2>
+IDEA TO <span>IMPACT</span>
+</h2>
 
-    <p>
-        A simple process designed to turn your idea
-        into a strong visual experience.
-    </p>
+<p>
+A simple process designed to turn your idea into
+a strong visual experience.
+</p>
 
 </div>
 
 
 <div class="process-grid">
 
-    <div class="process-item">
+<div class="process-item">
 
-        <div class="process-circle">01</div>
+<div class="process-circle">
+01
+</div>
 
-        <h3>DISCOVER</h3>
+<h3>DISCOVER</h3>
 
-        <p>
-            Understand the brand, audience,
-            requirements and goals.
-        </p>
+<p>
+Understand the brand, audience, requirements
+and goals.
+</p>
 
-    </div>
-
-
-    <div class="process-item">
-
-        <div class="process-circle">02</div>
-
-        <h3>CREATE</h3>
-
-        <p>
-            Develop concepts and creative
-            directions around the idea.
-        </p>
-
-    </div>
+</div>
 
 
-    <div class="process-item">
+<div class="process-item">
 
-        <div class="process-circle">03</div>
+<div class="process-circle">
+02
+</div>
 
-        <h3>VISUALIZE</h3>
+<h3>CREATE</h3>
 
-        <p>
-            Transform the concept into detailed
-            3D visuals and presentation.
-        </p>
+<p>
+Develop concepts and creative directions
+around the idea.
+</p>
 
-    </div>
+</div>
 
 
-    <div class="process-item">
+<div class="process-item">
 
-        <div class="process-circle">04</div>
+<div class="process-circle">
+03
+</div>
 
-        <h3>IMPACT</h3>
+<h3>VISUALIZE</h3>
 
-        <p>
-            Deliver a final experience designed
-            to attract and be remembered.
-        </p>
+<p>
+Transform the concept into detailed 3D visuals
+and presentation.
+</p>
 
-    </div>
+</div>
+
+
+<div class="process-item">
+
+<div class="process-circle">
+04
+</div>
+
+<h3>IMPACT</h3>
+
+<p>
+Deliver a final experience designed to attract
+and be remembered.
+</p>
+
+</div>
 
 </div>
 
@@ -1664,136 +1897,160 @@ footer{
 
 <div class="section-head">
 
-    <small>OUR WORK</small>
+<small>OUR WORK</small>
 
-    <h2>
-        SELECTED <span>PORTFOLIO</span>
-    </h2>
+<h2>
+SELECTED <span>PORTFOLIO</span>
+</h2>
 
-    <p>
-        A showcase of our exhibition designs,
-        3D visualizations, branding and creative work.
-    </p>
+<p>
+A showcase of our exhibition designs, 3D visualizations,
+branding and creative work.
+</p>
 
 </div>
 
 
 <div class="portfolio-box">
 
-    <div class="portfolio-icon">
-        ✦
-    </div>
+<div class="portfolio-icon">
+✦
+</div>
 
-    <h3>
-        PORTFOLIO <span>COMING SOON</span>
-    </h3>
+<h3>
+PORTFOLIO <span>COMING SOON</span>
+</h3>
 
-    <p>
-        We are preparing our project showcase.
-        Exhibition designs, 3D renders and creative
-        projects will be added here soon.
-    </p>
+<p>
+Our project showcase will be added here.
+Exhibition designs, 3D renders and creative projects
+will be displayed in this section.
+</p>
 
-    <div class="portfolio-note">
-        PROJECTS • 3D • EXHIBITIONS • BRANDING
-    </div>
+<div class="portfolio-note">
+PROJECTS • 3D • EXHIBITIONS • BRANDING
+</div>
 
 </div>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- ================= CONTACT US ================= -->
 
 <section class="contact" id="contact">
 
-<div class="contact-container">
+<div class="contact-wrapper">
+
+<div class="contact-top">
 
 
-    <div class="contact-text">
+<div class="contact-left">
 
-        <small>
-            LET'S TALK
-        </small>
+<small>
+LET'S TALK
+</small>
 
-        <h2>
-            HAVE A<br>
-            <span>PROJECT?</span>
-        </h2>
+<h2>
+HAVE A<br>
+<span>PROJECT?</span>
+</h2>
 
-        <p>
-            Tell us about your exhibition, branding,
-            3D design or digital media requirement.
-            Let's create something powerful together.
-        </p>
-
-
-        <div class="contact-info">
-
-            <div class="contact-item">
-
-                <strong>PHONE</strong>
-
-                +91 8928270866
-
-            </div>
+<p>
+Have an exhibition, branding, 3D visualization or
+creative project in mind? Let's turn your idea into
+something impressive.
+</p>
 
 
-            <div class="contact-item">
+<div class="contact-details">
 
-                <strong>PHONE / WHATSAPP</strong>
+<div class="contact-detail">
 
-                +91 7709 331 328
+<span>CALL US</span>
 
-            </div>
+<strong>
++91 8928270866
+</strong>
 
-
-            <div class="contact-item">
-
-                <strong>EMAIL</strong>
-
-                visioncraftexpo.com@gmail.com
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="contact-card">
+<div class="contact-detail">
 
-        <h3>
-            Start Your Project
-        </h3>
+<span>WHATSAPP</span>
 
-        <p>
-            Ready to create something impressive?
-            Contact VisionCraft today and let's discuss
-            your next project.
-        </p>
+<strong>
++91 7709 331 328
+</strong>
+
+</div>
 
 
-        <div class="hero-buttons">
+<div class="contact-detail">
 
-            <a
-                href="https://wa.me/917709331328"
-                target="_blank"
-                class="btn btn-main"
-            >
-                WHATSAPP US →
-            </a>
+<span>EMAIL</span>
 
-            <a
-                href="mailto:visioncraftexpo.com@gmail.com"
-                class="btn btn-border"
-            >
-                SEND EMAIL
-            </a>
+<strong>
+visioncraftexpo.com@gmail.com
+</strong>
 
-        </div>
+</div>
 
-    </div>
+
+<div class="contact-detail">
+
+<span>STUDIO</span>
+
+<strong>
+VisionCraft Creative Studio
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-right">
+
+<div class="circle">
+✦
+</div>
+
+<h3>
+Let's create something remarkable.
+</h3>
+
+<p>
+Tell us what you need and our creative team
+will get in touch with you.
+</p>
+
+<div class="contact-actions">
+
+<a
+href="https://wa.me/917709331328"
+target="_blank"
+class="btn btn-main"
+>
+WHATSAPP US →
+</a>
+
+<a
+href="mailto:visioncraftexpo.com@gmail.com"
+class="btn btn-border"
+>
+EMAIL US
+</a>
+
+</div>
+
+</div>
+
+
+</div>
 
 </div>
 
@@ -1807,58 +2064,68 @@ footer{
 <div class="footer-grid">
 
 
-    <div>
+<div>
 
-        <img
-            src="logo.png"
-            alt="VisionCraft Logo"
-            class="footer-logo"
-        >
+<img
+src="logo.png"
+alt="VisionCraft Logo"
+class="footer-logo"
+>
 
-        <p class="footer-about">
-            VisionCraft creates exhibition experiences,
-            3D visualizations, event branding, graphic
-            design and digital media solutions.
-        </p>
+<p class="footer-about">
+VisionCraft creates exhibition experiences,
+3D visualizations, event branding, graphic design
+and digital media solutions.
+</p>
 
-    </div>
-
-
-    <div class="footer-col">
-
-        <h4>NAVIGATION</h4>
-
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-
-    </div>
+</div>
 
 
-    <div class="footer-col">
+<div class="footer-col">
 
-        <h4>SERVICES</h4>
+<h4>NAVIGATION</h4>
 
-        <a href="#services">Exhibition Design</a>
-        <a href="#services">3D Visualization</a>
-        <a href="#services">Video Editing</a>
-        <a href="#services">Graphic Design</a>
+<a href="#home">Home</a>
 
-    </div>
+<a href="#about">About</a>
+
+<a href="#services">Services</a>
+
+<a href="#portfolio">Portfolio</a>
+
+<a href="#contact">Contact</a>
+
+</div>
 
 
-    <div class="footer-col">
+<div class="footer-col">
 
-        <h4>CONTACT</h4>
+<h4>SERVICES</h4>
 
-        <p>+91 8928270866</p>
-        <p>+91 7709 331 328</p>
-        <p>visioncraftexpo.com@gmail.com</p>
-        <p>India</p>
+<a href="#services">Exhibition Design</a>
 
-    </div>
+<a href="#services">3D Visualization</a>
+
+<a href="#services">Video Editing</a>
+
+<a href="#services">Graphic Design</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>CONTACT</h4>
+
+<p>+91 8928270866</p>
+
+<p>+91 7709 331 328</p>
+
+<p>visioncraftexpo.com@gmail.com</p>
+
+<p>India</p>
+
+</div>
 
 
 </div>
@@ -1866,13 +2133,13 @@ footer{
 
 <div class="footer-bottom">
 
-    <span>
-        © 2026 VisionCraft. All Rights Reserved.
-    </span>
+<span>
+© 2026 VisionCraft. All Rights Reserved.
+</span>
 
-    <span>
-        CREATE. DESIGN. IMPACT.
-    </span>
+<span>
+CREATE. DESIGN. IMPACT.
+</span>
 
 </div>
 
