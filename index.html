@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VisionCraft | Exhibition & Digital Solutions</title>
+<title>Contact | VisionCraft</title>
 
 <style>
 
@@ -57,9 +57,7 @@ header{
     background:#050708;
     padding:16px;
     text-align:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
+
     border-top:1px solid #163438;
     border-bottom:2px solid #0aa3a8;
 }
@@ -67,9 +65,12 @@ header{
 .menu a{
     color:#ffffff;
     text-decoration:none;
+
     margin:0 20px;
+
     font-size:15px;
     font-weight:bold;
+
     transition:0.3s;
 }
 
@@ -79,268 +80,74 @@ header{
 
 
 /* =====================================================
-   HERO
+   CONTACT HERO
 ===================================================== */
 
-.hero{
+.contact-hero{
     text-align:center;
-    padding:55px 20px 90px;
-    background:#0b1113;
+
+    padding:90px 20px 55px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(10,163,168,0.14),
+        transparent 60%
+    );
 }
 
-
-/* Premium Banner */
-
-.banner-img{
-    width:92%;
-    max-width:1400px;
-    height:620px;
-    object-fit:cover;
-    display:block;
-    margin:0 auto 45px;
-
-    border-radius:14px;
-
-    border:1px solid rgba(22,198,201,0.35);
-
-    box-shadow:
-        0 15px 45px rgba(0,0,0,0.55),
-        0 0 35px rgba(10,163,168,0.18);
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease,
-        border-color 0.4s ease;
-}
-
-.banner-img:hover{
-    transform:scale(1.01);
-
-    border-color:#16c6c9;
-
-    box-shadow:
-        0 20px 55px rgba(0,0,0,0.65),
-        0 0 45px rgba(22,198,201,0.25);
-}
-
-
-.hero h1{
+.contact-hero h1{
     font-size:48px;
+
     color:#16c6c9;
-    margin:10px 0;
+
+    margin:0 0 15px;
+
     letter-spacing:1px;
 }
 
-.hero h2{
-    font-size:25px;
-    color:#ffffff;
-    margin:15px 0;
-}
-
-.hero p{
-    max-width:800px;
-    margin:0 auto 28px;
+.contact-hero p{
+    color:#aebbbc;
 
     font-size:17px;
-    line-height:30px;
 
-    color:#b8c4c5;
+    line-height:28px;
+
+    max-width:700px;
+
+    margin:auto;
 }
 
 
 /* =====================================================
-   BUTTONS
+   CONTACT SECTION
 ===================================================== */
 
-button{
-    background:#0aa3a8;
-    color:#ffffff;
-
-    border:none;
-    border-radius:4px;
-
-    padding:14px 30px;
-    margin:8px;
-
-    font-size:15px;
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:0.3s;
+.contact-section{
+    padding:60px 7% 100px;
 }
 
-button:hover{
-    background:#16c6c9;
-    transform:translateY(-3px);
+.contact-container{
+    max-width:1150px;
 
-    box-shadow:
-        0 8px 20px rgba(10,163,168,0.25);
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about{
-    padding:100px 8%;
-    background:#111b1e;
-}
-
-.about-container{
-    max-width:1200px;
     margin:auto;
 
     display:flex;
-    align-items:center;
 
-    gap:60px;
-}
+    gap:45px;
 
-
-/* About Image */
-
-.about-image{
-    width:50%;
-}
-
-.about-image img{
-    width:100%;
-    height:430px;
-
-    object-fit:cover;
-    display:block;
-
-    border-radius:12px;
-
-    border:1px solid rgba(22,198,201,0.35);
-
-    box-shadow:
-        0 12px 35px rgba(0,0,0,0.55),
-        0 0 30px rgba(10,163,168,0.18);
-
-    transition:0.4s;
-}
-
-.about-image img:hover{
-    transform:scale(1.02);
-
-    border-color:#16c6c9;
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,0.65),
-        0 0 40px rgba(22,198,201,0.25);
-}
-
-
-/* About Content */
-
-.about-content{
-    width:50%;
-}
-
-.about-content h2{
-    font-size:40px;
-    color:#16c6c9;
-
-    margin:0 0 10px;
-}
-
-.about-content h3{
-    font-size:23px;
-    color:#ffffff;
-
-    margin:0 0 20px;
-}
-
-.about-content p{
-    font-size:16px;
-    line-height:29px;
-
-    color:#b8c8ca;
-
-    margin-bottom:15px;
-}
-
-
-/* About Button */
-
-.about-btn{
-    display:inline-block;
-
-    margin-top:10px;
-
-    padding:14px 28px;
-
-    background:#0aa3a8;
-    color:#ffffff;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    border-radius:4px;
-
-    transition:0.3s;
-}
-
-.about-btn:hover{
-    background:#16c6c9;
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 8px 20px rgba(10,163,168,0.25);
+    align-items:stretch;
 }
 
 
 /* =====================================================
-   SERVICES
+   CONTACT INFORMATION
 ===================================================== */
 
-.services{
-    padding:100px 5%;
-    text-align:center;
+.contact-info{
+    flex:1;
 
-    background:#0b1113;
-}
-
-.services > h2{
-    font-size:42px;
-
-    color:#ffffff;
-
-    letter-spacing:1px;
-
-    margin:0 0 12px;
-}
-
-.services > p{
-    font-size:15px;
-
-    color:#9eadaf;
-
-    margin-bottom:50px;
-}
-
-
-/* Premium Service Card */
-
-.box{
-    position:relative;
-
-    display:inline-block;
-    vertical-align:top;
-
-    width:260px;
-    min-height:210px;
-
-    padding:40px 25px;
-
-    margin:15px;
-
-    overflow:hidden;
+    padding:42px;
 
     background:linear-gradient(
         145deg,
@@ -350,247 +157,293 @@ button:hover{
 
     border:1px solid rgba(22,198,201,0.25);
 
-    border-radius:12px;
+    border-radius:14px;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.45),
-        inset 0 0 20px rgba(22,198,201,0.03);
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease,
-        border-color 0.4s ease;
+        0 15px 35px rgba(0,0,0,0.45);
 }
 
-
-/* Teal Top Line */
-
-.box::before{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:3px;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #16c6c9,
-        transparent
-    );
-
-    opacity:0.8;
-}
-
-
-/* Glow */
-
-.box::after{
-    content:"";
-
-    position:absolute;
-
-    width:120px;
-    height:120px;
-
-    right:-60px;
-    bottom:-60px;
-
-    background:#0aa3a8;
-
-    border-radius:50%;
-
-    filter:blur(50px);
-
-    opacity:0.08;
-
-    transition:0.4s;
-}
-
-
-/* Card Hover */
-
-.box:hover{
-    transform:translateY(-12px);
-
-    border-color:#16c6c9;
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,0.55),
-        0 0 25px rgba(22,198,201,0.18);
-}
-
-.box:hover::after{
-    opacity:0.2;
-}
-
-
-/* Service Heading */
-
-.box h3{
-    position:relative;
-    z-index:2;
-
-    font-size:21px;
-
+.contact-info h2{
     color:#16c6c9;
 
-    margin:10px 0 18px;
+    margin:0 0 15px;
 
-    letter-spacing:0.5px;
+    font-size:30px;
 }
 
+.contact-info > p{
+    color:#aebbbc;
 
-/* Service Underline */
+    line-height:27px;
 
-.box h3::after{
-    content:"";
-
-    display:block;
-
-    width:35px;
-    height:2px;
-
-    margin:12px auto 0;
-
-    background:#16c6c9;
-
-    transition:0.4s;
-}
-
-.box:hover h3::after{
-    width:65px;
-}
-
-
-/* Service Description */
-
-.box p{
-    position:relative;
-    z-index:2;
-
-    font-size:14px;
-
-    line-height:24px;
-
-    color:#b8c8ca;
-
-    margin:0;
+    margin-bottom:30px;
 }
 
 
 /* =====================================================
-   WHY CHOOSE US
+   INFO BOX
 ===================================================== */
 
-.why-us{
-    padding:100px 8%;
+.info-box{
+    margin-top:18px;
 
-    text-align:center;
+    padding:18px 20px;
 
-    background:#111b1e;
-}
-
-.why-us h2{
-    font-size:40px;
-
-    color:#ffffff;
-
-    margin:0 0 45px;
-}
-
-.why-container{
-    max-width:1100px;
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-}
-
-.why-box{
-    width:250px;
-
-    min-height:190px;
-
-    padding:30px 20px;
-
-    background:#121e21;
+    background:#0b1113;
 
     border:1px solid #1d3b3e;
 
-    border-radius:10px;
+    border-left:3px solid #16c6c9;
 
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.35);
+    border-radius:6px;
 
-    transition:0.4s;
+    transition:0.3s;
 }
 
-.why-box:hover{
-    transform:translateY(-8px);
-
+.info-box:hover{
     border-color:#16c6c9;
 
+    transform:translateX(5px);
+
     box-shadow:
-        0 15px 35px rgba(0,0,0,0.5),
-        0 0 20px rgba(22,198,201,0.12);
+        0 0 18px rgba(22,198,201,0.10);
 }
 
-.why-box h3{
+.info-box h3{
     color:#16c6c9;
 
-    font-size:20px;
+    margin:0 0 8px;
 
-    margin-bottom:15px;
+    font-size:17px;
 }
 
-.why-box p{
-    color:#aebbbc;
+.info-box p{
+    margin:0;
 
-    font-size:14px;
+    color:#d0d9da;
 
-    line-height:25px;
+    font-size:15px;
+
+    line-height:24px;
 }
 
 
 /* =====================================================
-   CTA
+   CLICKABLE EMAIL / PHONE
 ===================================================== */
 
-.cta{
-    padding:90px 20px;
+.info-box a{
+    color:#d0d9da;
 
-    text-align:center;
+    text-decoration:none;
 
-    background:#050708;
-
-    border-top:1px solid #0aa3a8;
+    transition:0.3s;
 }
 
-.cta h2{
-    font-size:40px;
+.info-box a:hover{
+    color:#16c6c9;
+}
+
+
+/* =====================================================
+   WHATSAPP BUTTON
+===================================================== */
+
+.whatsapp{
+    display:inline-block;
+
+    margin-top:28px;
+
+    padding:14px 25px;
+
+    background:#0aa3a8;
 
     color:#ffffff;
 
-    margin:0 0 15px;
+    text-decoration:none;
+
+    border-radius:5px;
+
+    font-weight:bold;
+
+    transition:0.3s;
 }
 
-.cta p{
-    font-size:17px;
+.whatsapp:hover{
+    background:#16c6c9;
 
-    color:#aebbbc;
+    transform:translateY(-3px);
 
-    margin-bottom:25px;
+    box-shadow:
+        0 8px 22px rgba(10,163,168,0.25);
+}
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+.contact-form{
+    flex:1;
+
+    padding:42px;
+
+    background:#111b1e;
+
+    border:1px solid #1d3b3e;
+
+    border-radius:14px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.45);
+}
+
+.contact-form h2{
+    margin:0 0 25px;
+
+    font-size:30px;
+
+    color:#ffffff;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#b8c8ca;
+
+    font-size:14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #284448;
+
+    border-radius:5px;
+
+    background:#0b1113;
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:#6f8082;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    border-color:#16c6c9;
+
+    box-shadow:
+        0 0 12px rgba(22,198,201,0.12);
+}
+
+.form-group textarea{
+    height:130px;
+
+    resize:vertical;
+}
+
+.form-group select option{
+    background:#0b1113;
+
+    color:#ffffff;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.submit-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:5px;
+
+    background:#0aa3a8;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+
+    background:#16c6c9;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(10,163,168,0.25);
+}
+
+
+/* =====================================================
+   CTA STRIP
+===================================================== */
+
+.contact-cta{
+    text-align:center;
+
+    padding:65px 20px;
+
+    background:#050708;
+
+    border-top:1px solid #163438;
+}
+
+.contact-cta h2{
+    margin:0 0 12px;
+
+    font-size:32px;
+
+    color:#ffffff;
+}
+
+.contact-cta p{
+    margin:0;
+
+    color:#9eadaf;
+
+    line-height:26px;
 }
 
 
@@ -599,13 +452,12 @@ button:hover{
 ===================================================== */
 
 footer{
-    background:#020405;
-
-    color:white;
 
     text-align:center;
 
-    padding:28px 15px;
+    padding:30px 15px;
+
+    background:#020405;
 
     border-top:1px solid #163438;
 }
@@ -613,19 +465,17 @@ footer{
 footer p{
     margin:6px;
 
-    font-size:14px;
-
     color:#8fa1a3;
+
+    font-size:14px;
 }
 
 
 /* =====================================================
-   MOBILE RESPONSIVE
+   MOBILE
 ===================================================== */
 
 @media(max-width:768px){
-
-    /* Header */
 
     header{
         padding:18px 15px;
@@ -635,12 +485,7 @@ footer p{
         width:220px;
     }
 
-
-    /* Menu */
-
     .menu{
-        position:static;
-
         padding:12px 8px;
     }
 
@@ -653,133 +498,54 @@ footer p{
     }
 
 
-    /* Hero */
+    /* Contact Hero */
 
-    .hero{
-        padding:35px 15px 60px;
+    .contact-hero{
+        padding:65px 20px 40px;
     }
 
-    .banner-img{
-        width:100%;
-        height:320px;
-
-        border-radius:9px;
-
-        margin-bottom:30px;
+    .contact-hero h1{
+        font-size:36px;
     }
 
-    .hero h1{
-        font-size:32px;
-    }
-
-    .hero h2{
-        font-size:20px;
-    }
-
-    .hero p{
+    .contact-hero p{
         font-size:15px;
+
         line-height:26px;
     }
 
 
-    /* About */
+    /* Contact */
 
-    .about{
-        padding:60px 20px;
+    .contact-section{
+        padding:40px 20px 70px;
     }
 
-    .about-container{
+    .contact-container{
         flex-direction:column;
 
-        gap:35px;
+        gap:25px;
     }
 
-    .about-image,
-    .about-content{
-        width:100%;
+    .contact-info,
+    .contact-form{
+        padding:28px 22px;
     }
 
-    .about-image img{
-        height:300px;
-    }
-
-    .about-content h2{
-        font-size:32px;
-    }
-
-    .about-content h3{
-        font-size:20px;
-    }
-
-
-    /* Services */
-
-    .services{
-        padding:70px 15px;
-    }
-
-    .services > h2{
-        font-size:32px;
-    }
-
-    .box{
-        width:90%;
-        max-width:320px;
-
-        margin:12px auto;
-    }
-
-
-    /* Why Us */
-
-    .why-us{
-        padding:70px 20px;
-    }
-
-    .why-us h2{
-        font-size:32px;
-    }
-
-    .why-box{
-        width:90%;
-        max-width:320px;
+    .contact-info h2,
+    .contact-form h2{
+        font-size:27px;
     }
 
 
     /* CTA */
 
-    .cta{
-        padding:70px 20px;
+    .contact-cta{
+        padding:55px 20px;
     }
 
-    .cta h2{
-        font-size:30px;
-    }
-
-}
-
-
-/* =====================================================
-   VERY SMALL SCREEN
-===================================================== */
-
-@media(max-width:400px){
-
-    .hero h1{
+    .contact-cta h2{
         font-size:27px;
-    }
-
-    .hero h2{
-        font-size:18px;
-    }
-
-    button{
-        padding:12px 20px;
-        font-size:13px;
-    }
-
-    .about-content h2{
-        font-size:28px;
     }
 
 }
@@ -815,9 +581,9 @@ footer p{
 
 <a href="index.html">Home</a>
 
-<a href="#about">About</a>
+<a href="index.html#about">About</a>
 
-<a href="#services">Services</a>
+<a href="index.html#services">Services</a>
 
 <a href="portfolio.html">Portfolio</a>
 
@@ -827,234 +593,279 @@ footer p{
 
 
 <!-- =====================================================
-     HERO
+     CONTACT HERO
 ===================================================== -->
 
-<section class="hero">
-
-<img
-    src="banner.jpg"
-    class="banner-img"
-    alt="VisionCraft Exhibition Stall"
->
+<section class="contact-hero">
 
 <h1>
-CREATE. DESIGN. IMPACT.
+Let's Talk
 </h1>
 
-<h2>
-Premium Exhibition Stall Design & Digital Solutions
-</h2>
-
 <p>
-VisionCraft creates innovative exhibition experiences,
-3D designs, branding solutions and digital media
-that help your brand stand out and make a lasting impression.
+Have a project in mind? Let's create something
+creative, professional and impactful together.
 </p>
-
-<button onclick="window.location.href='contact.html'">
-Get A Quote
-</button>
-
-<button onclick="window.location.href='portfolio.html'">
-View Portfolio
-</button>
 
 </section>
 
 
 <!-- =====================================================
-     ABOUT
+     CONTACT SECTION
 ===================================================== -->
 
-<section class="about" id="about">
+<section class="contact-section">
 
-<div class="about-container">
-
-
-<div class="about-image">
-
-<img
-    src="about.jpg"
-    alt="VisionCraft Exhibition Design"
->
-
-</div>
+<div class="contact-container">
 
 
-<div class="about-content">
+<!-- =====================================================
+     CONTACT INFORMATION
+===================================================== -->
+
+<div class="contact-info">
 
 <h2>
-About VisionCraft
+Get In Touch
 </h2>
 
+<p>
+We would love to hear about your next exhibition,
+branding or digital media project.
+</p>
+
+
+<!-- PHONE -->
+
+<div class="info-box">
+
 <h3>
-Creating Experiences. Building Brands.
+📞 Phone
 </h3>
 
 <p>
-VisionCraft is a creative design studio specializing in
-exhibition stall design, 3D visualization, event branding,
-video editing and graphic design.
-</p>
 
-<p>
-We combine creativity, technology and strategic thinking
-to create powerful visual experiences that help brands
-stand out and make a lasting impression.
-</p>
-
-<a
-    href="about.html"
-    class="about-btn"
->
-Know More
+<a href="tel:+918928270866">
++91 8928270866
 </a>
 
+</p>
+
 </div>
 
 
+<!-- EMAIL -->
+
+<div class="info-box">
+
+<h3>
+📧 Email
+</h3>
+
+<p>
+
+<a href="mailto:visioncraftexpo.com@gmail.com">
+visioncraftexpo.com@gmail.com
+</a>
+
+</p>
+
 </div>
 
-</section>
+
+<!-- WHATSAPP NUMBER -->
+
+<div class="info-box">
+
+<h3>
+💬 WhatsApp
+</h3>
+
+<p>
+
+<a
+    href="https://wa.me/917709331328"
+    target="_blank"
+>
++91 7709 331 328
+</a>
+
+</p>
+
+</div>
+
+
+<!-- LOCATION -->
+
+<div class="info-box">
+
+<h3>
+📍 Location
+</h3>
+
+<p>
+India
+</p>
+
+</div>
+
+
+<!-- WHATSAPP BUTTON -->
+
+<a
+    href="https://wa.me/917709331328"
+    class="whatsapp"
+    target="_blank"
+>
+WhatsApp Us
+</a>
+
+
+</div>
 
 
 <!-- =====================================================
-     SERVICES
+     CONTACT FORM
 ===================================================== -->
 
-<section class="services" id="services">
+<div class="contact-form">
 
 <h2>
-Our Services
+Send An Enquiry
 </h2>
 
-<p>
-Creative solutions designed to make your brand stand out.
-</p>
+
+<form
+    action="mailto:visioncraftexpo.com@gmail.com"
+    method="post"
+    enctype="text/plain"
+>
 
 
-<div class="box">
+<!-- NAME -->
 
-<h3>
-Exhibition Design
-</h3>
+<div class="form-group">
 
-<p>
-Stall Design & Fabrication
-</p>
+<label>
+Your Name
+</label>
 
-</div>
-
-
-<div class="box">
-
-<h3>
-3D Design
-</h3>
-
-<p>
-3D Visualization & Rendering
-</p>
+<input
+    type="text"
+    name="Name"
+    placeholder="Enter your name"
+    required
+>
 
 </div>
 
 
-<div class="box">
+<!-- EMAIL -->
 
-<h3>
+<div class="form-group">
+
+<label>
+Email Address
+</label>
+
+<input
+    type="email"
+    name="Email"
+    placeholder="Enter your email"
+    required
+>
+
+</div>
+
+
+<!-- PHONE -->
+
+<div class="form-group">
+
+<label>
+Phone Number
+</label>
+
+<input
+    type="tel"
+    name="Phone"
+    placeholder="Enter your phone number"
+    required
+>
+
+</div>
+
+
+<!-- SERVICE -->
+
+<div class="form-group">
+
+<label>
+Service Required
+</label>
+
+<select
+    name="Service"
+    required
+>
+
+<option value="">
+Select a service
+</option>
+
+<option>
+Exhibition Stall Design
+</option>
+
+<option>
+3D Design & Rendering
+</option>
+
+<option>
+Event Branding
+</option>
+
+<option>
 Video Editing
-</h3>
+</option>
 
-<p>
-Corporate & Event Videos
-</p>
-
-</div>
-
-
-<div class="box">
-
-<h3>
+<option>
 Graphic Design
-</h3>
+</option>
 
-<p>
-Logo & Branding
-</p>
+</select>
 
 </div>
 
 
-</section>
+<!-- MESSAGE -->
 
+<div class="form-group">
 
-<!-- =====================================================
-     WHY CHOOSE US
-===================================================== -->
+<label>
+Project Details
+</label>
 
-<section class="why-us">
-
-<h2>
-Why Choose VisionCraft?
-</h2>
-
-
-<div class="why-container">
-
-
-<div class="why-box">
-
-<h3>
-Creative Ideas
-</h3>
-
-<p>
-Unique and innovative concepts
-created specifically for your brand.
-</p>
+<textarea
+    name="Message"
+    placeholder="Tell us about your project..."
+    required
+></textarea>
 
 </div>
 
 
-<div class="why-box">
+<!-- SUBMIT -->
 
-<h3>
-Professional Quality
-</h3>
-
-<p>
-High-quality design and execution
-with attention to every detail.
-</p>
-
-</div>
+<button
+    type="submit"
+    class="submit-btn"
+>
+Send Enquiry
+</button>
 
 
-<div class="why-box">
-
-<h3>
-Complete Solutions
-</h3>
-
-<p>
-From concept and 3D design to
-branding and final execution.
-</p>
-
-</div>
-
-
-<div class="why-box">
-
-<h3>
-Brand Impact
-</h3>
-
-<p>
-Design experiences that attract
-attention and create lasting impact.
-</p>
+</form>
 
 </div>
 
@@ -1068,20 +879,16 @@ attention and create lasting impact.
      CTA
 ===================================================== -->
 
-<section class="cta">
+<section class="contact-cta">
 
 <h2>
-Let's Create Something Amazing
+Ready To Create Something Amazing?
 </h2>
 
 <p>
-Ready to make your brand stand out?
-Let's discuss your next project.
+Contact VisionCraft today and let's bring your next
+exhibition or creative project to life.
 </p>
-
-<button onclick="window.location.href='contact.html'">
-Contact Us
-</button>
 
 </section>
 
