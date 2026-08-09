@@ -7,34 +7,339 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VisionCraft | Exhibition & Digital Solutions</title>
-/* =========================
-   PREMIUM SERVICES CARDS
-========================= */
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b1113;
+    color:#ffffff;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    padding:22px 20px;
+    text-align:center;
+    background:#080d0f;
+}
+
+.logo{
+    width:300px;
+    max-width:80%;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.menu{
+    background:#050708;
+    padding:16px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-top:1px solid #163438;
+    border-bottom:2px solid #0aa3a8;
+}
+
+.menu a{
+    color:#ffffff;
+    text-decoration:none;
+    margin:0 20px;
+    font-size:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#16c6c9;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    text-align:center;
+    padding:55px 20px 90px;
+    background:#0b1113;
+}
+
+
+/* Premium Banner */
+
+.banner-img{
+    width:92%;
+    max-width:1400px;
+    height:620px;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 45px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(22,198,201,0.35);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.55),
+        0 0 35px rgba(10,163,168,0.18);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.banner-img:hover{
+    transform:scale(1.01);
+
+    border-color:#16c6c9;
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,0.65),
+        0 0 45px rgba(22,198,201,0.25);
+}
+
+
+.hero h1{
+    font-size:48px;
+    color:#16c6c9;
+    margin:10px 0;
+    letter-spacing:1px;
+}
+
+.hero h2{
+    font-size:25px;
+    color:#ffffff;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:800px;
+    margin:0 auto 28px;
+
+    font-size:17px;
+    line-height:30px;
+
+    color:#b8c4c5;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button{
+    background:#0aa3a8;
+    color:#ffffff;
+
+    border:none;
+    border-radius:4px;
+
+    padding:14px 30px;
+    margin:8px;
+
+    font-size:15px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background:#16c6c9;
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(10,163,168,0.25);
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about{
+    padding:100px 8%;
+    background:#111b1e;
+}
+
+.about-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+
+    gap:60px;
+}
+
+
+/* About Image */
+
+.about-image{
+    width:50%;
+}
+
+.about-image img{
+    width:100%;
+    height:430px;
+
+    object-fit:cover;
+    display:block;
+
+    border-radius:12px;
+
+    border:1px solid rgba(22,198,201,0.35);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.55),
+        0 0 30px rgba(10,163,168,0.18);
+
+    transition:0.4s;
+}
+
+.about-image img:hover{
+    transform:scale(1.02);
+
+    border-color:#16c6c9;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.65),
+        0 0 40px rgba(22,198,201,0.25);
+}
+
+
+/* About Content */
+
+.about-content{
+    width:50%;
+}
+
+.about-content h2{
+    font-size:40px;
+    color:#16c6c9;
+
+    margin:0 0 10px;
+}
+
+.about-content h3{
+    font-size:23px;
+    color:#ffffff;
+
+    margin:0 0 20px;
+}
+
+.about-content p{
+    font-size:16px;
+    line-height:29px;
+
+    color:#b8c8ca;
+
+    margin-bottom:15px;
+}
+
+
+/* About Button */
+
+.about-btn{
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:14px 28px;
+
+    background:#0aa3a8;
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:4px;
+
+    transition:0.3s;
+}
+
+.about-btn:hover{
+    background:#16c6c9;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(10,163,168,0.25);
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
 
 .services{
     padding:100px 5%;
-    position:relative;
+    text-align:center;
+
+    background:#0b1113;
 }
 
 .services > h2{
     font-size:42px;
+
+    color:#ffffff;
+
     letter-spacing:1px;
-    margin-bottom:12px;
+
+    margin:0 0 12px;
 }
 
 .services > p{
     font-size:15px;
+
+    color:#9eadaf;
+
     margin-bottom:50px;
 }
 
-/* Card */
+
+/* Premium Service Card */
 
 .box{
     position:relative;
+
+    display:inline-block;
+    vertical-align:top;
+
     width:260px;
     min-height:210px;
+
     padding:40px 25px;
+
     margin:15px;
+
     overflow:hidden;
 
     background:linear-gradient(
@@ -44,6 +349,7 @@
     );
 
     border:1px solid rgba(22,198,201,0.25);
+
     border-radius:12px;
 
     box-shadow:
@@ -56,13 +362,17 @@
         border-color 0.4s ease;
 }
 
-/* Teal glow line */
+
+/* Teal Top Line */
 
 .box::before{
     content:"";
+
     position:absolute;
+
     top:0;
     left:0;
+
     width:100%;
     height:3px;
 
@@ -73,27 +383,34 @@
         transparent
     );
 
-    opacity:0.7;
+    opacity:0.8;
 }
 
-/* Background glow */
+
+/* Glow */
 
 .box::after{
     content:"";
+
     position:absolute;
+
     width:120px;
     height:120px;
+
     right:-60px;
     bottom:-60px;
 
     background:#0aa3a8;
+
     border-radius:50%;
 
     filter:blur(50px);
+
     opacity:0.08;
 
     transition:0.4s;
 }
+
 
 /* Card Hover */
 
@@ -111,13 +428,15 @@
     opacity:0.2;
 }
 
-/* Card heading */
+
+/* Service Heading */
 
 .box h3{
     position:relative;
     z-index:2;
 
     font-size:21px;
+
     color:#16c6c9;
 
     margin:10px 0 18px;
@@ -125,24 +444,12 @@
     letter-spacing:0.5px;
 }
 
-/* Card description */
 
-.box p{
-    position:relative;
-    z-index:2;
-
-    font-size:14px;
-    line-height:24px;
-
-    color:#b8c8ca;
-
-    margin:0;
-}
-
-/* Small premium accent */
+/* Service Underline */
 
 .box h3::after{
     content:"";
+
     display:block;
 
     width:35px;
@@ -158,393 +465,207 @@
 .box:hover h3::after{
     width:65px;
 }
-/* =========================
-   PREMIUM BANNER IMAGE
-========================= */
 
-.banner-img{
-    width:90%;
-    max-width:1400px;
-    height:620px;
-    object-fit:cover;
-    display:block;
-    margin:0 auto 40px;
 
-    border-radius:12px;
-
-    border:1px solid rgba(22,198,201,0.35);
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,0.55),
-        0 0 30px rgba(10,163,168,0.18);
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease,
-        border-color 0.4s ease;
-}
-
-.banner-img:hover{
-    transform:scale(1.01);
-
-    border-color:#16c6c9;
-
-    box-shadow:
-        0 15px 45px rgba(0,0,0,0.65),
-        0 0 35px rgba(22,198,201,0.25);
-}
-   <style>
-
-/* =========================
-   BASIC
-========================= */
-
-*{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#ffffff;
-    color:#222;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    padding:20px;
-    text-align:center;
-    background:#ffffff;
-}
-
-.logo{
-    width:300px;
-    height:auto;
-    display:block;
-    margin:auto;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-.menu{
-    background:#222;
-    padding:16px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin:0 20px;
-    font-size:15px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.menu a:hover{
-    color:#0aa3a8;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    text-align:center;
-    padding:45px 20px 70px;
-    background:#ffffff;
-}
-
-.banner-img{
-    width:90%;
-    max-width:1400px;
-    height:560px;
-    object-fit:cover;
-    display:block;
-    margin:0 auto 40px;
-}
-
-.hero h1{
-    font-size:48px;
-    color:#0fa3a8;
-    margin:10px 0;
-    letter-spacing:1px;
-}
-
-.hero h2{
-    font-size:25px;
-    margin:15px 0;
-    color:#222;
-}
-
-.hero p{
-    font-size:17px;
-    line-height:30px;
-    max-width:800px;
-    margin:0 auto 25px;
-    color:#555;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-button{
-    background:#0aa3a8;
-    color:white;
-    border:none;
-    padding:14px 28px;
-    margin:8px;
-    font-size:15px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:3px;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#087f83;
-    transform:translateY(-2px);
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    padding:80px 8%;
-    background:#f5f5f5;
-}
-
-.about-container{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    gap:60px;
-}
-
-.about-image{
-    width:50%;
-}
-
-.about-image img{
-    width:100%;
-    height:430px;
-    object-fit:cover;
-    display:block;
-    border-radius:8px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
-}
-
-.about-content{
-    width:50%;
-}
-
-.about-content h2{
-    font-size:40px;
-    color:#0fa3a8;
-    margin:0 0 10px;
-}
-
-.about-content h3{
-    font-size:23px;
-    margin:0 0 20px;
-    color:#222;
-}
-
-.about-content p{
-    font-size:16px;
-    line-height:29px;
-    color:#555;
-    margin-bottom:15px;
-}
-
-.about-btn{
-    display:inline-block;
-    margin-top:10px;
-    padding:14px 28px;
-    background:#0aa3a8;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:3px;
-    transition:0.3s;
-}
-
-.about-btn:hover{
-    background:#087f83;
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.services{
-    text-align:center;
-    padding:80px 5%;
-    background:#ffffff;
-}
-
-.services > h2{
-    font-size:38px;
-    margin:0 0 10px;
-    color:#222;
-}
-
-.services > p{
-    color:#666;
-    margin-bottom:35px;
-}
-
-.box{
-    display:inline-block;
-    vertical-align:top;
-    width:240px;
-    min-height:180px;
-    padding:30px 20px;
-    margin:15px;
-    background:white;
-    box-shadow:0 0 15px rgba(0,0,0,0.12);
-    border-radius:5px;
-    transition:0.3s;
-}
-
-.box:hover{
-    transform:translateY(-8px);
-    box-shadow:0 8px 25px rgba(0,0,0,0.18);
-}
-
-.box h3{
-    color:#0fa3a8;
-    font-size:20px;
-    margin-bottom:15px;
-}
+/* Service Description */
 
 .box p{
-    color:#666;
-    line-height:25px;
+    position:relative;
+    z-index:2;
+
+    font-size:14px;
+
+    line-height:24px;
+
+    color:#b8c8ca;
+
+    margin:0;
 }
 
-/* =========================
-   WHY US
-========================= */
+
+/* =====================================================
+   WHY CHOOSE US
+===================================================== */
 
 .why-us{
-    padding:80px 8%;
-    background:#f5f5f5;
+    padding:100px 8%;
+
     text-align:center;
+
+    background:#111b1e;
 }
 
 .why-us h2{
-    font-size:38px;
-    margin-bottom:40px;
+    font-size:40px;
+
+    color:#ffffff;
+
+    margin:0 0 45px;
 }
 
 .why-container{
     max-width:1100px;
+
     margin:auto;
+
     display:flex;
+
     justify-content:center;
+
     gap:25px;
+
     flex-wrap:wrap;
 }
 
 .why-box{
-    background:white;
     width:250px;
+
+    min-height:190px;
+
     padding:30px 20px;
-    box-shadow:0 0 12px rgba(0,0,0,0.1);
-    border-radius:5px;
+
+    background:#121e21;
+
+    border:1px solid #1d3b3e;
+
+    border-radius:10px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.35);
+
+    transition:0.4s;
+}
+
+.why-box:hover{
+    transform:translateY(-8px);
+
+    border-color:#16c6c9;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.5),
+        0 0 20px rgba(22,198,201,0.12);
 }
 
 .why-box h3{
-    color:#0fa3a8;
+    color:#16c6c9;
+
+    font-size:20px;
+
+    margin-bottom:15px;
 }
 
 .why-box p{
-    color:#666;
+    color:#aebbbc;
+
+    font-size:14px;
+
     line-height:25px;
 }
 
-/* =========================
+
+/* =====================================================
    CTA
-========================= */
+===================================================== */
 
 .cta{
-    padding:70px 20px;
+    padding:90px 20px;
+
     text-align:center;
-    background:#222;
-    color:white;
+
+    background:#050708;
+
+    border-top:1px solid #0aa3a8;
 }
 
 .cta h2{
-    font-size:38px;
+    font-size:40px;
+
+    color:#ffffff;
+
     margin:0 0 15px;
 }
 
 .cta p{
     font-size:17px;
+
+    color:#aebbbc;
+
     margin-bottom:25px;
-    color:#ddd;
 }
 
-/* =========================
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
-    background:#111;
+    background:#020405;
+
     color:white;
+
     text-align:center;
-    padding:25px 15px;
+
+    padding:28px 15px;
+
+    border-top:1px solid #163438;
 }
 
 footer p{
-    margin:5px;
+    margin:6px;
+
     font-size:14px;
-    color:#ccc;
+
+    color:#8fa1a3;
 }
 
-/* =========================
-   MOBILE
-========================= */
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
 
 @media(max-width:768px){
+
+    /* Header */
+
+    header{
+        padding:18px 15px;
+    }
 
     .logo{
         width:220px;
     }
 
+
+    /* Menu */
+
     .menu{
         position:static;
+
+        padding:12px 8px;
     }
 
     .menu a{
         display:inline-block;
-        margin:7px 10px;
+
+        margin:7px 9px;
+
         font-size:13px;
     }
 
+
+    /* Hero */
+
     .hero{
-        padding:30px 15px 50px;
+        padding:35px 15px 60px;
     }
 
     .banner-img{
         width:100%;
-        height:300px;
+        height:320px;
+
+        border-radius:9px;
+
+        margin-bottom:30px;
     }
 
     .hero h1{
@@ -560,12 +681,16 @@ footer p{
         line-height:26px;
     }
 
+
+    /* About */
+
     .about{
-        padding:50px 20px;
+        padding:60px 20px;
     }
 
     .about-container{
         flex-direction:column;
+
         gap:35px;
     }
 
@@ -582,30 +707,49 @@ footer p{
         font-size:32px;
     }
 
+    .about-content h3{
+        font-size:20px;
+    }
+
+
+    /* Services */
+
     .services{
-        padding:50px 15px;
+        padding:70px 15px;
     }
 
     .services > h2{
-        font-size:30px;
+        font-size:32px;
     }
 
     .box{
         width:90%;
-        max-width:300px;
+        max-width:320px;
+
+        margin:12px auto;
     }
 
+
+    /* Why Us */
+
     .why-us{
-        padding:50px 20px;
+        padding:70px 20px;
     }
 
     .why-us h2{
-        font-size:30px;
+        font-size:32px;
     }
 
     .why-box{
         width:90%;
-        max-width:300px;
+        max-width:320px;
+    }
+
+
+    /* CTA */
+
+    .cta{
+        padding:70px 20px;
     }
 
     .cta h2{
@@ -613,150 +757,33 @@ footer p{
     }
 
 }
-/* =========================
-   DARK + TEAL VISIONCRAFT THEME
-========================= */
 
-body{
-    background:#0b1113;
-    color:#ffffff;
+
+/* =====================================================
+   VERY SMALL SCREEN
+===================================================== */
+
+@media(max-width:400px){
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero h2{
+        font-size:18px;
+    }
+
+    button{
+        padding:12px 20px;
+        font-size:13px;
+    }
+
+    .about-content h2{
+        font-size:28px;
+    }
+
 }
 
-/* Header */
-header{
-    background:#0b1113;
-}
-
-/* Navigation */
-.menu{
-    background:#050708;
-    border-bottom:2px solid #0aa3a8;
-}
-
-.menu a{
-    color:#ffffff;
-}
-
-.menu a:hover{
-    color:#0aa3a8;
-}
-
-/* Hero */
-.hero{
-    background:#0b1113;
-}
-
-.hero h1{
-    color:#16c6c9;
-}
-
-.hero h2{
-    color:#ffffff;
-}
-
-.hero p{
-    color:#b8c4c5;
-}
-
-/* About */
-.about{
-    background:#111b1e;
-}
-
-.about-content h2{
-    color:#16c6c9;
-}
-
-.about-content h3{
-    color:#ffffff;
-}
-
-.about-content p{
-    color:#b8c4c5;
-}
-
-.about-image img{
-    box-shadow:0 0 25px rgba(10,163,168,0.35);
-}
-
-/* Services */
-.services{
-    background:#0b1113;
-}
-
-.services > h2{
-    color:#ffffff;
-}
-
-.services > p{
-    color:#9eadaf;
-}
-
-.box{
-    background:#121e21;
-    border:1px solid #1d3b3e;
-    box-shadow:0 0 15px rgba(0,0,0,0.35);
-}
-
-.box h3{
-    color:#16c6c9;
-}
-
-.box p{
-    color:#aebbbc;
-}
-
-.box:hover{
-    border-color:#0aa3a8;
-    box-shadow:0 0 25px rgba(10,163,168,0.25);
-}
-
-/* Why Us */
-.why-us{
-    background:#111b1e;
-}
-
-.why-us h2{
-    color:#ffffff;
-}
-
-.why-box{
-    background:#121e21;
-    border:1px solid #1d3b3e;
-    box-shadow:0 0 15px rgba(0,0,0,0.3);
-}
-
-.why-box h3{
-    color:#16c6c9;
-}
-
-.why-box p{
-    color:#aebbbc;
-}
-
-/* CTA */
-.cta{
-    background:#050708;
-    border-top:1px solid #0aa3a8;
-}
-
-.cta h2{
-    color:#ffffff;
-}
-
-.cta p{
-    color:#aebbbc;
-}
-
-/* Footer */
-footer{
-    background:#020405;
-    border-top:1px solid #163438;
-}
-
-footer p{
-    color:#8fa1a3;
-}
 </style>
 
 </head>
@@ -765,22 +792,24 @@ footer p{
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
-<img src="logo.png"
-     class="logo"
-     alt="VisionCraft Logo">
+<img
+    src="logo.png"
+    class="logo"
+    alt="VisionCraft Logo"
+>
 
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <div class="menu">
 
@@ -797,15 +826,17 @@ footer p{
 </div>
 
 
-<!-- =========================
-     HERO SECTION
-========================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-<img src="banner.jpg"
-     class="banner-img"
-     alt="VisionCraft Exhibition Stall">
+<img
+    src="banner.jpg"
+    class="banner-img"
+    alt="VisionCraft Exhibition Stall"
+>
 
 <h1>
 CREATE. DESIGN. IMPACT.
@@ -832,9 +863,9 @@ View Portfolio
 </section>
 
 
-<!-- =========================
-     ABOUT SECTION
-========================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section class="about" id="about">
 
@@ -843,8 +874,10 @@ View Portfolio
 
 <div class="about-image">
 
-<img src="about.jpg"
-     alt="VisionCraft Exhibition Design">
+<img
+    src="about.jpg"
+    alt="VisionCraft Exhibition Design"
+>
 
 </div>
 
@@ -871,7 +904,10 @@ to create powerful visual experiences that help brands
 stand out and make a lasting impression.
 </p>
 
-<a href="about.html" class="about-btn">
+<a
+    href="about.html"
+    class="about-btn"
+>
 Know More
 </a>
 
@@ -883,9 +919,9 @@ Know More
 </section>
 
 
-<!-- =========================
-     SERVICES SECTION
-========================= -->
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
 <section class="services" id="services">
 
@@ -953,9 +989,9 @@ Logo & Branding
 </section>
 
 
-<!-- =========================
-     WHY VISIONCRAFT
-========================= -->
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
 
 <section class="why-us">
 
@@ -1028,9 +1064,9 @@ attention and create lasting impact.
 </section>
 
 
-<!-- =========================
-     CALL TO ACTION
-========================= -->
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section class="cta">
 
@@ -1050,9 +1086,9 @@ Contact Us
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
