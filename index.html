@@ -92,10 +92,113 @@ width:80%;
 height:720px;
 object-fit:cover;
 }
+.about {
+    padding: 80px 8%;
+    background: #f7f7f7;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-text {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about-intro {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text > p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-points {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.about-points div {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about-points h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.about-points p {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .about-points {
+        flex-direction: column;
+    }
+}
 </style>
 
 </head>
+<section class="about" id="about">
 
+    <div class="about-text">
+        <h2>About VisionCraft</h2>
+
+        <h3>We are VisionCraft</h3>
+
+        <p>
+            We specialize in exhibition stall design,
+            2D visualization, event branding,
+            video editing and digital design.
+        </p>
+    </div>
+
+    <div class="about-points">
+
+        <div>
+            <h3>Creative Design</h3>
+            <p>
+                Creative and attractive designs
+                that make your brand stand out.
+            </p>
+        </div>
+
+        <div>
+            <h3>Professional Service</h3>
+            <p>
+                We provide professional solutions
+                for exhibitions and events.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
 
 <body>
@@ -131,18 +234,52 @@ that help your brand stand out.
 </section>
 
 
-<section class="about">
+<section class="about" id="about">
 
-<h2>About VisionCraft</h2>
+    <div class="about-content">
 
-<p>
-We specialize in Exhibition Stall Design,
-3D Visualization, Event Branding,
-Video Editing and Graphic Design.
-</p>
+        <div class="about-text">
+            <h2>About VisionCraft</h2>
+
+            <p class="about-intro">
+                We turn ideas into powerful visual experiences.
+            </p>
+
+            <p>
+                VisionCraft is a creative exhibition and 3D design studio
+                focused on creating innovative and engaging visual solutions.
+                We combine creativity, technology and design to bring your
+                vision to life.
+            </p>
+
+            <p>
+                From exhibition stall design and 3D visualization to event
+                branding and creative displays, we work closely with our
+                clients to deliver designs that make a lasting impression.
+            </p>
+
+            <div class="about-points">
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To transform ideas into creative, attractive and
+                        meaningful visual experiences.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become a trusted creative partner for exhibitions,
+                        events and 3D design solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </section>
-
 
 <section class="services">
 
