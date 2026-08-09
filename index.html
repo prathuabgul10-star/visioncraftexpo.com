@@ -7,6 +7,11 @@
 <title>VisionCraft | Exhibition & Creative Studio</title>
 
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
 *{
     margin:0;
     padding:0;
@@ -18,9 +23,9 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#05090a;
-    color:#fff;
+    color:#ffffff;
     overflow-x:hidden;
 }
 
@@ -31,16 +36,18 @@ a{
 
 :root{
     --bg:#05090a;
-    --dark:#081315;
-    --dark2:#0b191b;
+    --dark:#071113;
+    --dark2:#0a1719;
     --teal:#0fd1d2;
-    --teal-light:#35f4ef;
-    --text:#eaf4f4;
+    --cyan:#35f4ef;
+    --text:#edfafa;
     --muted:#91a5a7;
 }
 
 
-/* ================= HEADER ================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
     position:fixed;
@@ -69,6 +76,7 @@ header{
 .logo img{
     width:230px;
     height:auto;
+    display:block;
 }
 
 .nav-menu{
@@ -78,34 +86,41 @@ header{
 }
 
 .nav-menu a{
+    color:#d9e5e6;
     font-size:12px;
     font-weight:bold;
-    color:#d9e5e6;
     transition:.3s;
 }
 
 .nav-menu a:hover{
-    color:var(--teal);
+    color:var(--cyan);
 }
 
 .nav-contact{
+    padding:12px 23px;
+
     border:1px solid var(--teal);
-    padding:12px 22px;
     border-radius:30px;
+
     color:var(--teal)!important;
 }
 
 .nav-contact:hover{
     background:var(--teal);
     color:#031011!important;
+
+    box-shadow:0 0 25px rgba(15,209,210,.25);
 }
 
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
     min-height:100vh;
-    padding:135px 5% 80px;
+
+    padding:140px 5% 80px;
 
     display:flex;
     align-items:center;
@@ -113,12 +128,12 @@ header{
     position:relative;
 
     background:
-    radial-gradient(
-        circle at 15% 50%,
-        rgba(15,209,210,.13),
-        transparent 32%
-    ),
-    #05090a;
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(15,209,210,.13),
+            transparent 32%
+        ),
+        #05090a;
 }
 
 .hero-container{
@@ -127,36 +142,52 @@ header{
     margin:auto;
 
     display:grid;
+
     grid-template-columns:42% 58%;
+
     align-items:center;
 
     gap:50px;
 }
 
+
+/* HERO TEXT */
+
 .hero-small{
-    color:var(--teal);
+    color:var(--cyan);
+
     font-size:12px;
-    letter-spacing:4px;
+
     font-weight:bold;
+
+    letter-spacing:4px;
+
     margin-bottom:25px;
 }
 
 .hero h1{
     font-size:clamp(55px,7vw,100px);
+
     line-height:.88;
+
     letter-spacing:-5px;
+
     margin-bottom:30px;
 }
 
 .hero h1 span{
-    color:var(--teal);
+    color:var(--cyan);
 }
 
 .hero-description{
     max-width:530px;
+
     color:var(--muted);
+
     font-size:16px;
+
     line-height:1.8;
+
     margin-bottom:35px;
 }
 
@@ -168,105 +199,184 @@ header{
 
 .btn{
     display:inline-block;
+
     padding:15px 28px;
+
     border-radius:4px;
+
     font-size:12px;
+
     font-weight:bold;
+
     transition:.3s;
 }
 
 .btn-main{
     background:var(--teal);
+
     color:#031011;
+
+    box-shadow:0 0 0 rgba(15,209,210,0);
 }
 
 .btn-main:hover{
     transform:translateY(-3px);
-    box-shadow:0 12px 35px rgba(15,209,210,.35);
+
+    box-shadow:
+        0 12px 35px rgba(15,209,210,.35),
+        0 0 20px rgba(15,209,210,.15);
 }
 
 .btn-border{
     border:1px solid rgba(15,209,210,.55);
+
     color:var(--teal);
 }
 
 .btn-border:hover{
     background:rgba(15,209,210,.08);
+
+    box-shadow:0 0 25px rgba(15,209,210,.08);
 }
 
 
-/* ================= HERO IMAGE ================= */
+/* =========================================================
+   HERO IMAGE + PREMIUM GLOW
+========================================================= */
 
 .hero-image{
     position:relative;
+
     isolation:isolate;
+
+    padding:35px;
 }
+
+
+/* BIG GLOW */
 
 .hero-image::before{
     content:"";
+
     position:absolute;
 
-    width:600px;
-    height:600px;
+    width:82%;
+    height:82%;
 
-    right:-100px;
-    top:50%;
+    left:9%;
+    top:9%;
 
-    transform:translateY(-50%);
+    background:#00ffff;
 
-    background:#00e5e5;
-    opacity:.20;
+    opacity:.32;
 
-    filter:blur(120px);
+    filter:blur(105px);
+
     border-radius:50%;
 
-    z-index:-2;
+    z-index:-3;
+
+    pointer-events:none;
 }
+
+
+/* SECOND GLOW */
 
 .hero-image::after{
     content:"";
+
     position:absolute;
 
-    width:300px;
-    height:300px;
+    width:55%;
+    height:55%;
 
-    left:-50px;
-    bottom:-40px;
+    left:22%;
+    top:24%;
 
-    background:#0fd1d2;
-    opacity:.18;
+    background:#00aeb0;
 
-    filter:blur(90px);
+    opacity:.38;
+
+    filter:blur(75px);
+
     border-radius:50%;
 
     z-index:-2;
+
+    pointer-events:none;
 }
+
+
+/* IMAGE FRAME */
 
 .hero-image-box{
     position:relative;
-    padding:10px;
+
+    padding:8px;
+
+    border-radius:24px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(15,209,210,.20),
-        rgba(5,9,10,.92)
-    );
-
-    border:1px solid rgba(15,209,210,.45);
-    border-radius:22px;
+        linear-gradient(
+            135deg,
+            rgba(53,244,239,.85),
+            rgba(15,209,210,.12) 45%,
+            rgba(0,255,255,.60)
+        );
 
     box-shadow:
-    0 35px 90px rgba(0,0,0,.65),
-    0 0 45px rgba(15,209,210,.16);
+        0 0 25px rgba(15,209,210,.40),
+        0 0 65px rgba(15,209,210,.28),
+        0 30px 90px rgba(0,0,0,.70);
+
+    z-index:2;
 }
 
+
+/* IMAGE */
+
 .hero-image-box img{
+    display:block;
+
     width:100%;
+
     height:590px;
+
     object-fit:cover;
-    border-radius:14px;
+
+    border-radius:17px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        inset 0 0 35px rgba(0,0,0,.45);
 }
+
+
+/* GLOW BORDER */
+
+.hero-image-box::before{
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(53,244,239,.55);
+
+    box-shadow:
+        0 0 20px rgba(53,244,239,.40),
+        0 0 50px rgba(53,244,239,.18);
+
+    pointer-events:none;
+
+    z-index:5;
+}
+
+
+/* HERO LABEL */
 
 .hero-label{
     position:absolute;
@@ -277,26 +387,40 @@ header{
     padding:18px 24px;
 
     background:rgba(5,9,10,.95);
-    backdrop-filter:blur(15px);
 
-    border:1px solid rgba(15,209,210,.4);
-    border-radius:8px;
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(15,209,210,.50);
+
+    border-radius:9px;
+
+    box-shadow:
+        0 0 25px rgba(15,209,210,.16),
+        0 15px 40px rgba(0,0,0,.50);
+
+    z-index:10;
 }
 
 .hero-label strong{
     display:block;
-    color:var(--teal);
+
+    color:var(--cyan);
+
     font-size:13px;
+
     margin-bottom:5px;
 }
 
 .hero-label small{
     color:#91a5a7;
+
     font-size:10px;
 }
 
 
-/* ================= MARQUEE ================= */
+/* =========================================================
+   MARQUEE
+========================================================= */
 
 .marquee{
     overflow:hidden;
@@ -311,7 +435,9 @@ header{
 
 .marquee-track{
     width:max-content;
+
     display:flex;
+
     animation:move 25s linear infinite;
 }
 
@@ -321,7 +447,9 @@ header{
     color:#8fa5a7;
 
     font-size:12px;
+
     font-weight:bold;
+
     letter-spacing:3px;
 }
 
@@ -330,35 +458,47 @@ header{
 }
 
 @keyframes move{
-    from{transform:translateX(0);}
-    to{transform:translateX(-50%);}
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
 }
 
 
-/* ================= ABOUT ================= */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about{
     padding:130px 6%;
 
     background:
-    linear-gradient(
-        180deg,
-        #071113,
-        #05090a
-    );
+        linear-gradient(
+            180deg,
+            #071113,
+            #05090a
+        );
 }
 
 .about-container{
     max-width:1300px;
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:48% 52%;
 
     align-items:center;
 
     gap:80px;
 }
+
+
+/* ABOUT IMAGE */
 
 .about-image{
     position:relative;
@@ -375,9 +515,12 @@ header{
     width:100%;
     height:100%;
 
-    border:1px solid rgba(15,209,210,.28);
+    border:1px solid rgba(15,209,210,.30);
 
     border-radius:18px;
+
+    box-shadow:
+        0 0 35px rgba(15,209,210,.08);
 }
 
 .about-image::after{
@@ -392,7 +535,8 @@ header{
     top:30%;
 
     background:var(--teal);
-    opacity:.14;
+
+    opacity:.20;
 
     filter:blur(90px);
 
@@ -403,9 +547,11 @@ header{
 
 .about-image img{
     position:relative;
+
     z-index:2;
 
     width:100%;
+
     height:520px;
 
     object-fit:cover;
@@ -414,8 +560,13 @@ header{
 
     border:1px solid rgba(15,209,210,.35);
 
-    box-shadow:0 25px 70px rgba(0,0,0,.5);
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.50),
+        0 0 35px rgba(15,209,210,.08);
 }
+
+
+/* ABOUT TEXT */
 
 .about-text small{
     color:var(--teal);
@@ -429,6 +580,7 @@ header{
 
 .about-text h2{
     font-size:52px;
+
     line-height:1;
 
     margin:18px 0 25px;
@@ -466,6 +618,14 @@ header{
     border:1px solid rgba(15,209,210,.15);
 
     border-radius:8px;
+
+    transition:.3s;
+}
+
+.point:hover{
+    border-color:rgba(15,209,210,.45);
+
+    background:rgba(15,209,210,.06);
 }
 
 .point strong{
@@ -485,7 +645,9 @@ header{
 }
 
 
-/* ================= SECTION TITLE ================= */
+/* =========================================================
+   SECTION TITLE
+========================================================= */
 
 .section-head{
     max-width:700px;
@@ -522,7 +684,9 @@ header{
 }
 
 
-/* ================= SERVICES ================= */
+/* =========================================================
+   SERVICES
+========================================================= */
 
 .services{
     padding:130px 6%;
@@ -552,11 +716,11 @@ header{
     overflow:hidden;
 
     background:
-    linear-gradient(
-        145deg,
-        #0d1d20,
-        #071012
-    );
+        linear-gradient(
+            145deg,
+            #0d1d20,
+            #071012
+        );
 
     border:1px solid rgba(15,209,210,.16);
 
@@ -578,7 +742,7 @@ header{
 
     background:var(--teal);
 
-    opacity:.06;
+    opacity:.08;
 
     filter:blur(50px);
 
@@ -588,15 +752,15 @@ header{
 .service:hover{
     transform:translateY(-10px);
 
-    border-color:rgba(15,209,210,.6);
+    border-color:rgba(15,209,210,.60);
 
     box-shadow:
-    0 25px 60px rgba(0,0,0,.45),
-    0 0 35px rgba(15,209,210,.08);
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 35px rgba(15,209,210,.10);
 }
 
 .service-number{
-    color:rgba(15,209,210,.5);
+    color:rgba(15,209,210,.55);
 
     font-size:11px;
 
@@ -614,13 +778,15 @@ header{
     align-items:center;
     justify-content:center;
 
-    border:1px solid rgba(15,209,210,.3);
+    border:1px solid rgba(15,209,210,.35);
 
     border-radius:10px;
 
     color:var(--teal);
 
     font-size:21px;
+
+    box-shadow:0 0 25px rgba(15,209,210,.06);
 }
 
 .service h3{
@@ -638,7 +804,9 @@ header{
 }
 
 
-/* ================= NUMBERS ================= */
+/* =========================================================
+   NUMBERS
+========================================================= */
 
 .numbers{
     padding:80px 6%;
@@ -646,7 +814,6 @@ header{
     background:#081416;
 
     border-top:1px solid rgba(15,209,210,.12);
-
     border-bottom:1px solid rgba(15,209,210,.12);
 }
 
@@ -689,7 +856,9 @@ header{
 }
 
 
-/* ================= PROCESS ================= */
+/* =========================================================
+   PROCESS
+========================================================= */
 
 .process{
     padding:130px 6%;
@@ -765,18 +934,20 @@ header{
 }
 
 
-/* ================= PORTFOLIO ================= */
+/* =========================================================
+   PORTFOLIO
+========================================================= */
 
 .portfolio{
     padding:130px 6%;
 
     background:
-    radial-gradient(
-        circle at 50% 30%,
-        rgba(15,209,210,.08),
-        transparent 45%
-    ),
-    #071012;
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(15,209,210,.09),
+            transparent 45%
+        ),
+        #071012;
 }
 
 .portfolio-box{
@@ -791,7 +962,6 @@ header{
     flex-direction:column;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
@@ -807,15 +977,15 @@ header{
     border-radius:20px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(15,209,210,.06),
-        rgba(5,9,10,.8)
-    );
+        linear-gradient(
+            145deg,
+            rgba(15,209,210,.06),
+            rgba(5,9,10,.80)
+        );
 
     box-shadow:
-    0 30px 80px rgba(0,0,0,.45),
-    inset 0 0 60px rgba(15,209,210,.025);
+        0 30px 80px rgba(0,0,0,.45),
+        inset 0 0 60px rgba(15,209,210,.025);
 }
 
 .portfolio-box::before{
@@ -831,7 +1001,7 @@ header{
 
     background:var(--teal);
 
-    opacity:.08;
+    opacity:.09;
 
     filter:blur(100px);
 
@@ -851,7 +1021,7 @@ header{
 
     background:var(--teal);
 
-    opacity:.06;
+    opacity:.07;
 
     filter:blur(90px);
 
@@ -867,7 +1037,7 @@ header{
     align-items:center;
     justify-content:center;
 
-    border:1px solid rgba(15,209,210,.4);
+    border:1px solid rgba(15,209,210,.40);
 
     border-radius:50%;
 
@@ -923,7 +1093,9 @@ header{
 }
 
 
-/* ================= CONTACT US ================= */
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact{
     padding:120px 6%;
@@ -931,17 +1103,17 @@ header{
     position:relative;
 
     background:
-    radial-gradient(
-        circle at 15% 50%,
-        rgba(15,209,210,.12),
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 85% 50%,
-        rgba(15,209,210,.08),
-        transparent 30%
-    ),
-    #05090a;
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(15,209,210,.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(15,209,210,.09),
+            transparent 30%
+        ),
+        #05090a;
 }
 
 .contact::before{
@@ -956,12 +1128,12 @@ header{
     height:1px;
 
     background:
-    linear-gradient(
-        90deg,
-        transparent,
-        rgba(15,209,210,.5),
-        transparent
-    );
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(15,209,210,.50),
+            transparent
+        );
 }
 
 .contact-wrapper{
@@ -980,15 +1152,15 @@ header{
     border-radius:24px;
 
     background:
-    linear-gradient(
-        135deg,
-        rgba(15,209,210,.08),
-        rgba(8,19,21,.95)
-    );
+        linear-gradient(
+            135deg,
+            rgba(15,209,210,.08),
+            rgba(8,19,21,.95)
+        );
 
     box-shadow:
-    0 30px 90px rgba(0,0,0,.5),
-    0 0 70px rgba(15,209,210,.06);
+        0 30px 90px rgba(0,0,0,.50),
+        0 0 70px rgba(15,209,210,.06);
 }
 
 .contact-wrapper::before{
@@ -1130,9 +1302,10 @@ header{
 
     background:rgba(3,9,10,.65);
 
-    border:1px solid rgba(15,209,210,.2);
+    border:1px solid rgba(15,209,210,.20);
 
-    box-shadow:inset 0 0 40px rgba(15,209,210,.025);
+    box-shadow:
+        inset 0 0 40px rgba(15,209,210,.025);
 }
 
 .contact-right .circle{
@@ -1148,13 +1321,13 @@ header{
 
     border-radius:50%;
 
-    border:1px solid rgba(15,209,210,.5);
+    border:1px solid rgba(15,209,210,.50);
 
     color:var(--teal);
 
     font-size:24px;
 
-    box-shadow:0 0 30px rgba(15,209,210,.1);
+    box-shadow:0 0 30px rgba(15,209,210,.10);
 }
 
 .contact-right h3{
@@ -1182,7 +1355,9 @@ header{
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
     padding:65px 6% 25px;
@@ -1262,7 +1437,9 @@ footer{
 }
 
 
-/* ================= TABLET ================= */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media(max-width:1050px){
 
@@ -1329,7 +1506,9 @@ footer{
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:700px){
 
@@ -1353,6 +1532,7 @@ footer{
         display:none;
     }
 
+
     .hero{
         padding:120px 20px 70px;
     }
@@ -1367,20 +1547,43 @@ footer{
         font-size:14px;
     }
 
+
+    /* MOBILE GLOW */
+
+    .hero-image{
+        padding:20px;
+    }
+
+    .hero-image::before{
+        width:90%;
+        height:70%;
+
+        left:5%;
+        top:15%;
+
+        filter:blur(75px);
+
+        opacity:.32;
+    }
+
+    .hero-image::after{
+        filter:blur(55px);
+
+        opacity:.34;
+    }
+
     .hero-image-box img{
         height:350px;
     }
 
     .hero-label{
-        left:10px;
-        bottom:15px;
+        left:0;
+
+        bottom:10px;
+
+        padding:14px 18px;
     }
 
-    .hero-image::before{
-        width:350px;
-        height:350px;
-        right:-20px;
-    }
 
     .about,
     .services,
@@ -1468,6 +1671,7 @@ footer{
 
         gap:10px;
     }
+
 }
 
 </style>
@@ -1477,7 +1681,9 @@ footer{
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
@@ -1508,11 +1714,14 @@ LET'S TALK
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-container">
+
 
 <div class="hero-text">
 
@@ -1572,27 +1781,38 @@ CONCEPT • 3D • BRANDING • EXECUTION
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ================= MARQUEE ================= -->
+<!-- =========================================================
+     MARQUEE
+========================================================= -->
 
 <div class="marquee">
 
 <div class="marquee-track">
 
 <span>EXHIBITION <b>✦</b></span>
+
 <span>3D VISUALIZATION <b>✦</b></span>
+
 <span>EVENT BRANDING <b>✦</b></span>
+
 <span>GRAPHIC DESIGN <b>✦</b></span>
+
 <span>VIDEO EDITING <b>✦</b></span>
 
 <span>EXHIBITION <b>✦</b></span>
+
 <span>3D VISUALIZATION <b>✦</b></span>
+
 <span>EVENT BRANDING <b>✦</b></span>
+
 <span>GRAPHIC DESIGN <b>✦</b></span>
+
 <span>VIDEO EDITING <b>✦</b></span>
 
 </div>
@@ -1600,11 +1820,14 @@ CONCEPT • 3D • BRANDING • EXECUTION
 </div>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
 <section class="about" id="about">
 
 <div class="about-container">
+
 
 <div class="about-image">
 
@@ -1639,26 +1862,50 @@ and practical design to create experiences that attract
 attention and help brands connect with their audience.
 </p>
 
+
 <div class="about-points">
 
 <div class="point">
+
 <strong>CREATIVE</strong>
-<p>Fresh ideas built around your brand.</p>
+
+<p>
+Fresh ideas built around your brand.
+</p>
+
 </div>
 
+
 <div class="point">
+
 <strong>PREMIUM</strong>
-<p>Clean and professional visual execution.</p>
+
+<p>
+Clean and professional visual execution.
+</p>
+
 </div>
 
+
 <div class="point">
+
 <strong>VISUAL</strong>
-<p>Powerful 3D and graphic presentation.</p>
+
+<p>
+Powerful 3D and graphic presentation.
+</p>
+
 </div>
 
+
 <div class="point">
+
 <strong>IMPACT</strong>
-<p>Designs created to be remembered.</p>
+
+<p>
+Designs created to be remembered.
+</p>
+
 </div>
 
 </div>
@@ -1670,7 +1917,9 @@ attention and help brands connect with their audience.
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- =========================================================
+     SERVICES
+========================================================= -->
 
 <section class="services" id="services">
 
@@ -1695,9 +1944,13 @@ look stronger, communicate better and stand out.
 
 <div class="service">
 
-<div class="service-number">01 / 04</div>
+<div class="service-number">
+01 / 04
+</div>
 
-<div class="service-icon">◈</div>
+<div class="service-icon">
+◈
+</div>
 
 <h3>
 Exhibition Design
@@ -1714,9 +1967,13 @@ brand presence.
 
 <div class="service">
 
-<div class="service-number">02 / 04</div>
+<div class="service-number">
+02 / 04
+</div>
 
-<div class="service-icon">◇</div>
+<div class="service-icon">
+◇
+</div>
 
 <h3>
 3D Visualization
@@ -1732,9 +1989,13 @@ you visualize the final exhibition before execution.
 
 <div class="service">
 
-<div class="service-number">03 / 04</div>
+<div class="service-number">
+03 / 04
+</div>
 
-<div class="service-icon">▶</div>
+<div class="service-icon">
+▶
+</div>
 
 <h3>
 Video Editing
@@ -1750,9 +2011,13 @@ strong storytelling and professional visual presentation.
 
 <div class="service">
 
-<div class="service-number">04 / 04</div>
+<div class="service-number">
+04 / 04
+</div>
 
-<div class="service-icon">✦</div>
+<div class="service-icon">
+✦
+</div>
 
 <h3>
 Graphic Design
@@ -1765,49 +2030,81 @@ communication designed to match your brand identity.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ================= NUMBERS ================= -->
+<!-- =========================================================
+     NUMBERS
+========================================================= -->
 
 <section class="numbers">
 
 <div class="numbers-grid">
 
+
 <div class="number">
+
 <strong>3D</strong>
-<span>VISUALIZATION</span>
+
+<span>
+VISUALIZATION
+</span>
+
 </div>
 
+
 <div class="number">
+
 <strong>360°</strong>
-<span>BRAND EXPERIENCE</span>
+
+<span>
+BRAND EXPERIENCE
+</span>
+
 </div>
 
+
 <div class="number">
+
 <strong>100%</strong>
-<span>CREATIVE FOCUS</span>
+
+<span>
+CREATIVE FOCUS
+</span>
+
 </div>
 
+
 <div class="number">
+
 <strong>01</strong>
-<span>CREATIVE PARTNER</span>
+
+<span>
+CREATIVE PARTNER
+</span>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ================= PROCESS ================= -->
+<!-- =========================================================
+     PROCESS
+========================================================= -->
 
 <section class="process">
 
 <div class="section-head">
 
-<small>OUR PROCESS</small>
+<small>
+OUR PROCESS
+</small>
 
 <h2>
 IDEA TO <span>IMPACT</span>
@@ -1823,13 +2120,16 @@ a strong visual experience.
 
 <div class="process-grid">
 
+
 <div class="process-item">
 
 <div class="process-circle">
 01
 </div>
 
-<h3>DISCOVER</h3>
+<h3>
+DISCOVER
+</h3>
 
 <p>
 Understand the brand, audience, requirements
@@ -1845,7 +2145,9 @@ and goals.
 02
 </div>
 
-<h3>CREATE</h3>
+<h3>
+CREATE
+</h3>
 
 <p>
 Develop concepts and creative directions
@@ -1861,7 +2163,9 @@ around the idea.
 03
 </div>
 
-<h3>VISUALIZE</h3>
+<h3>
+VISUALIZE
+</h3>
 
 <p>
 Transform the concept into detailed 3D visuals
@@ -1877,7 +2181,9 @@ and presentation.
 04
 </div>
 
-<h3>IMPACT</h3>
+<h3>
+IMPACT
+</h3>
 
 <p>
 Deliver a final experience designed to attract
@@ -1886,18 +2192,23 @@ and be remembered.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ================= PORTFOLIO ================= -->
+<!-- =========================================================
+     PORTFOLIO
+========================================================= -->
 
 <section class="portfolio" id="portfolio">
 
 <div class="section-head">
 
-<small>OUR WORK</small>
+<small>
+OUR WORK
+</small>
 
 <h2>
 SELECTED <span>PORTFOLIO</span>
@@ -1936,11 +2247,14 @@ PROJECTS • 3D • EXHIBITIONS • BRANDING
 </section>
 
 
-<!-- ================= CONTACT US ================= -->
+<!-- =========================================================
+     CONTACT
+========================================================= -->
 
 <section class="contact" id="contact">
 
 <div class="contact-wrapper">
+
 
 <div class="contact-top">
 
@@ -1965,9 +2279,12 @@ something impressive.
 
 <div class="contact-details">
 
+
 <div class="contact-detail">
 
-<span>CALL US</span>
+<span>
+CALL US
+</span>
 
 <strong>
 +91 8928270866
@@ -1978,7 +2295,9 @@ something impressive.
 
 <div class="contact-detail">
 
-<span>WHATSAPP</span>
+<span>
+WHATSAPP
+</span>
 
 <strong>
 +91 7709 331 328
@@ -1989,7 +2308,9 @@ something impressive.
 
 <div class="contact-detail">
 
-<span>EMAIL</span>
+<span>
+EMAIL
+</span>
 
 <strong>
 visioncraftexpo.com@gmail.com
@@ -2000,13 +2321,16 @@ visioncraftexpo.com@gmail.com
 
 <div class="contact-detail">
 
-<span>STUDIO</span>
+<span>
+STUDIO
+</span>
 
 <strong>
 VisionCraft Creative Studio
 </strong>
 
 </div>
+
 
 </div>
 
@@ -2028,6 +2352,7 @@ Tell us what you need and our creative team
 will get in touch with you.
 </p>
 
+
 <div class="contact-actions">
 
 <a
@@ -2037,6 +2362,7 @@ class="btn btn-main"
 >
 WHATSAPP US →
 </a>
+
 
 <a
 href="mailto:visioncraftexpo.com@gmail.com"
@@ -2057,7 +2383,9 @@ EMAIL US
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
@@ -2083,47 +2411,79 @@ and digital media solutions.
 
 <div class="footer-col">
 
-<h4>NAVIGATION</h4>
+<h4>
+NAVIGATION
+</h4>
 
-<a href="#home">Home</a>
+<a href="#home">
+Home
+</a>
 
-<a href="#about">About</a>
+<a href="#about">
+About
+</a>
 
-<a href="#services">Services</a>
+<a href="#services">
+Services
+</a>
 
-<a href="#portfolio">Portfolio</a>
+<a href="#portfolio">
+Portfolio
+</a>
 
-<a href="#contact">Contact</a>
-
-</div>
-
-
-<div class="footer-col">
-
-<h4>SERVICES</h4>
-
-<a href="#services">Exhibition Design</a>
-
-<a href="#services">3D Visualization</a>
-
-<a href="#services">Video Editing</a>
-
-<a href="#services">Graphic Design</a>
+<a href="#contact">
+Contact
+</a>
 
 </div>
 
 
 <div class="footer-col">
 
-<h4>CONTACT</h4>
+<h4>
+SERVICES
+</h4>
 
-<p>+91 8928270866</p>
+<a href="#services">
+Exhibition Design
+</a>
 
-<p>+91 7709 331 328</p>
+<a href="#services">
+3D Visualization
+</a>
 
-<p>visioncraftexpo.com@gmail.com</p>
+<a href="#services">
+Video Editing
+</a>
 
-<p>India</p>
+<a href="#services">
+Graphic Design
+</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>
+CONTACT
+</h4>
+
+<p>
++91 8928270866
+</p>
+
+<p>
++91 7709 331 328
+</p>
+
+<p>
+visioncraftexpo.com@gmail.com
+</p>
+
+<p>
+India
+</p>
 
 </div>
 
