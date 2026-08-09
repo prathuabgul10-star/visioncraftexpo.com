@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VisionCraft | Create. Design. Impact.</title>
+<title>VisionCraft | Exhibition & Creative Studio</title>
 
 <style>
-
-/* =========================
-   RESET
-========================= */
-
 *{
     margin:0;
     padding:0;
@@ -25,15 +18,10 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#050809;
-    color:#ffffff;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#05090a;
+    color:#fff;
     overflow-x:hidden;
-}
-
-img{
-    max-width:100%;
-    display:block;
 }
 
 a{
@@ -41,34 +29,34 @@ a{
     color:inherit;
 }
 
-/* =========================
-   COLORS
-========================= */
-
-:root{
-    --black:#050809;
-    --dark:#081113;
-    --dark2:#0b191c;
-    --teal:#11cbd2;
-    --teal2:#00f0e5;
-    --white:#ffffff;
-    --gray:#9aaeb0;
-    --line:rgba(17,203,210,.20);
+img{
+    display:block;
+    max-width:100%;
 }
 
-/* =========================
-   HEADER
-========================= */
+:root{
+    --black:#05090a;
+    --dark:#071214;
+    --dark2:#0b191b;
+    --teal:#0fd1d2;
+    --teal2:#35f4ef;
+    --gray:#9eadaf;
+}
+
+
+/* ================= HEADER ================= */
 
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index:999;
-    background:rgba(5,8,9,.80);
+    z-index:9999;
+
+    background:rgba(5,9,10,.84);
     backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(17,203,210,.15);
+
+    border-bottom:1px solid rgba(15,209,210,.16);
 }
 
 .navbar{
@@ -82,23 +70,20 @@ header{
     justify-content:space-between;
 }
 
-/* BIG LOGO */
-
 .logo img{
     width:220px;
     height:auto;
-    display:block;
 }
 
 .nav-menu{
     display:flex;
     align-items:center;
-    gap:35px;
+    gap:30px;
 }
 
 .nav-menu a{
-    color:#dce9e9;
-    font-size:14px;
+    color:#dce6e7;
+    font-size:13px;
     font-weight:bold;
     transition:.3s;
 }
@@ -116,26 +101,27 @@ header{
 
 .nav-contact:hover{
     background:var(--teal);
-    color:#031012!important;
+    color:#031011!important;
 }
 
-/* =========================
-   HERO
-========================= */
+
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
-    position:relative;
+    padding:135px 5% 80px;
 
+    position:relative;
     display:flex;
     align-items:center;
 
-    padding:130px 4% 70px;
-
     background:
-    radial-gradient(circle at 20% 50%,rgba(17,203,210,.13),transparent 35%),
-    radial-gradient(circle at 85% 30%,rgba(0,240,229,.07),transparent 30%),
-    #050809;
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(15,209,210,.13),
+            transparent 32%
+        ),
+        #05090a;
 }
 
 .hero-container{
@@ -146,14 +132,7 @@ header{
     display:grid;
     grid-template-columns:42% 58%;
     align-items:center;
-    gap:35px;
-}
-
-/* HERO TEXT */
-
-.hero-text{
-    position:relative;
-    z-index:2;
+    gap:50px;
 }
 
 .hero-small{
@@ -165,8 +144,8 @@ header{
 }
 
 .hero h1{
-    font-size:clamp(55px,7vw,105px);
-    line-height:.90;
+    font-size:clamp(55px,7vw,100px);
+    line-height:.88;
     letter-spacing:-5px;
     margin-bottom:30px;
 }
@@ -176,7 +155,7 @@ header{
 }
 
 .hero-description{
-    max-width:530px;
+    max-width:520px;
     color:var(--gray);
     font-size:17px;
     line-height:1.8;
@@ -190,65 +169,79 @@ header{
 }
 
 .btn{
+    display:inline-block;
     padding:15px 28px;
     border-radius:4px;
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
     transition:.3s;
 }
 
 .btn-main{
     background:var(--teal);
-    color:#031012;
+    color:#031011;
 }
 
 .btn-main:hover{
     transform:translateY(-3px);
-    box-shadow:0 10px 35px rgba(17,203,210,.3);
+    box-shadow:0 10px 35px rgba(15,209,210,.35);
 }
 
 .btn-border{
-    border:1px solid rgba(17,203,210,.5);
+    border:1px solid rgba(15,209,210,.5);
     color:var(--teal);
 }
 
 .btn-border:hover{
-    background:rgba(17,203,210,.08);
+    background:rgba(15,209,210,.08);
 }
 
-/* HERO IMAGE */
+
+/* ================= HERO IMAGE ================= */
 
 .hero-image{
     position:relative;
+    isolation:isolate;
 }
 
 .hero-image::before{
     content:"";
     position:absolute;
-    width:90%;
-    height:90%;
-    right:-20px;
-    top:-20px;
 
-    border:1px solid rgba(17,203,210,.25);
-    border-radius:25px;
+    width:600px;
+    height:600px;
 
-    z-index:0;
+    right:-100px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:#00e5e5;
+    opacity:.20;
+
+    filter:blur(120px);
+    border-radius:50%;
+
+    z-index:-2;
 }
 
 .hero-image::after{
     content:"";
     position:absolute;
-    width:350px;
-    height:350px;
 
-    right:0;
-    top:20%;
+    width:300px;
+    height:300px;
 
-    background:rgba(17,203,210,.12);
-    filter:blur(100px);
+    left:-50px;
+    bottom:-40px;
 
-    z-index:0;
+    background:#0fd1d2;
+    opacity:.15;
+
+    filter:blur(90px);
+    border-radius:50%;
+
+    z-index:-2;
 }
 
 .hero-image-box{
@@ -257,22 +250,26 @@ header{
 
     padding:10px;
 
-    background:#081113;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,209,210,.20),
+            rgba(5,9,10,.92)
+        );
 
-    border:1px solid rgba(17,203,210,.35);
-
-    border-radius:20px;
+    border:1px solid rgba(15,209,210,.45);
+    border-radius:22px;
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.6),
-        0 0 50px rgba(17,203,210,.08);
+        0 35px 90px rgba(0,0,0,.65),
+        0 0 45px rgba(15,209,210,.16);
 }
 
 .hero-image-box img{
     width:100%;
     height:590px;
     object-fit:cover;
-    border-radius:13px;
+    border-radius:14px;
 }
 
 .hero-label{
@@ -283,79 +280,74 @@ header{
 
     padding:18px 24px;
 
-    background:rgba(5,8,9,.92);
+    background:rgba(5,9,10,.95);
     backdrop-filter:blur(15px);
 
-    border:1px solid rgba(17,203,210,.35);
+    border:1px solid rgba(15,209,210,.4);
     border-radius:8px;
-
-    z-index:5;
 }
 
 .hero-label strong{
     display:block;
     color:var(--teal);
-    font-size:14px;
+    font-size:13px;
+    margin-bottom:5px;
 }
 
 .hero-label small{
-    color:#a1b5b7;
-    font-size:11px;
+    color:#91a5a7;
+    font-size:10px;
 }
 
-/* =========================
-   MARQUEE
-========================= */
+
+/* ================= MARQUEE ================= */
 
 .marquee{
     overflow:hidden;
 
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+    background:#081416;
 
-    background:#071012;
+    border-top:1px solid rgba(15,209,210,.15);
+    border-bottom:1px solid rgba(15,209,210,.15);
 
     padding:20px 0;
 }
 
 .marquee-track{
-    display:flex;
     width:max-content;
+    display:flex;
     animation:move 25s linear infinite;
 }
 
 .marquee span{
-    font-size:13px;
+    margin:0 35px;
+    color:#8fa5a7;
+    font-size:12px;
     font-weight:bold;
     letter-spacing:3px;
-
-    color:#9db3b5;
-
-    margin:0 35px;
 }
 
-.marquee span b{
+.marquee b{
     color:var(--teal);
 }
 
 @keyframes move{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
 }
 
-/* =========================
-   ABOUT
-========================= */
+
+/* ================= ABOUT ================= */
 
 .about{
     padding:130px 6%;
 
     background:
-    linear-gradient(180deg,#071012,#050809);
+        linear-gradient(
+            180deg,
+            #071113,
+            #05090a
+        );
 }
 
 .about-container{
@@ -374,17 +366,35 @@ header{
 
 .about-image::before{
     content:"";
-
     position:absolute;
 
-    left:-18px;
-    bottom:-18px;
+    left:-20px;
+    bottom:-20px;
 
     width:100%;
     height:100%;
 
-    border:1px solid rgba(17,203,210,.25);
+    border:1px solid rgba(15,209,210,.28);
     border-radius:18px;
+}
+
+.about-image::after{
+    content:"";
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    left:20%;
+    top:30%;
+
+    background:var(--teal);
+    opacity:.14;
+
+    filter:blur(90px);
+    border-radius:50%;
+
+    z-index:0;
 }
 
 .about-image img{
@@ -397,12 +407,14 @@ header{
     object-fit:cover;
 
     border-radius:15px;
+    border:1px solid rgba(15,209,210,.35);
 
-    border:1px solid rgba(17,203,210,.30);
+    box-shadow:0 25px 70px rgba(0,0,0,.5);
 }
 
 .about-text small{
     color:var(--teal);
+    font-size:11px;
     font-weight:bold;
     letter-spacing:4px;
 }
@@ -421,7 +433,7 @@ header{
     color:var(--gray);
     font-size:15px;
     line-height:1.9;
-    margin-bottom:18px;
+    margin-bottom:17px;
 }
 
 .about-points{
@@ -435,17 +447,17 @@ header{
 .point{
     padding:20px;
 
-    background:rgba(17,203,210,.04);
+    background:rgba(15,209,210,.035);
 
-    border:1px solid rgba(17,203,210,.15);
-
+    border:1px solid rgba(15,209,210,.15);
     border-radius:8px;
 }
 
 .point strong{
     display:block;
     color:var(--teal);
-    margin-bottom:6px;
+    font-size:13px;
+    margin-bottom:7px;
 }
 
 .point p{
@@ -453,15 +465,8 @@ header{
     font-size:12px;
 }
 
-/* =========================
-   SERVICES
-========================= */
 
-.services{
-    padding:130px 6%;
-
-    background:#050809;
-}
+/* ================= SECTION HEAD ================= */
 
 .section-head{
     max-width:700px;
@@ -471,8 +476,9 @@ header{
 
 .section-head small{
     color:var(--teal);
-    letter-spacing:4px;
+    font-size:11px;
     font-weight:bold;
+    letter-spacing:4px;
 }
 
 .section-head h2{
@@ -489,6 +495,14 @@ header{
     line-height:1.8;
 }
 
+
+/* ================= SERVICES ================= */
+
+.services{
+    padding:130px 6%;
+    background:#05090a;
+}
+
 .services-grid{
     max-width:1300px;
     margin:auto;
@@ -503,55 +517,74 @@ header{
 
     padding:30px;
 
-    background:
-    linear-gradient(145deg,#0d1c1f,#071012);
-
-    border:1px solid rgba(17,203,210,.16);
-
-    border-radius:12px;
-
     position:relative;
     overflow:hidden;
 
+    background:
+        linear-gradient(
+            145deg,
+            #0d1d20,
+            #071012
+        );
+
+    border:1px solid rgba(15,209,210,.16);
+    border-radius:12px;
+
     transition:.4s;
+}
+
+.service::before{
+    content:"";
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    right:-80px;
+    top:-80px;
+
+    background:var(--teal);
+    opacity:.06;
+
+    filter:blur(50px);
+    border-radius:50%;
 }
 
 .service:hover{
     transform:translateY(-10px);
 
-    border-color:rgba(17,203,210,.6);
+    border-color:rgba(15,209,210,.6);
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,.4),
-        0 0 30px rgba(17,203,210,.08);
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 35px rgba(15,209,210,.08);
 }
 
 .service-number{
-    color:rgba(17,203,210,.4);
-    font-size:12px;
+    color:rgba(15,209,210,.5);
+    font-size:11px;
     letter-spacing:2px;
 }
 
 .service-icon{
-    margin:40px 0 25px;
-
     width:55px;
     height:55px;
+
+    margin:40px 0 25px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    border:1px solid rgba(17,203,210,.3);
+    border:1px solid rgba(15,209,210,.3);
     border-radius:10px;
 
     color:var(--teal);
-
-    font-size:22px;
+    font-size:21px;
 }
 
 .service h3{
-    font-size:20px;
+    font-size:19px;
     margin-bottom:12px;
 }
 
@@ -561,17 +594,16 @@ header{
     line-height:1.7;
 }
 
-/* =========================
-   NUMBERS
-========================= */
+
+/* ================= NUMBERS ================= */
 
 .numbers{
     padding:80px 6%;
 
-    background:#081417;
+    background:#081416;
 
-    border-top:1px solid rgba(17,203,210,.12);
-    border-bottom:1px solid rgba(17,203,210,.12);
+    border-top:1px solid rgba(15,209,210,.12);
+    border-bottom:1px solid rgba(15,209,210,.12);
 }
 
 .numbers-grid{
@@ -580,6 +612,7 @@ header{
 
     display:grid;
     grid-template-columns:repeat(4,1fr);
+
     text-align:center;
 }
 
@@ -589,28 +622,27 @@ header{
 }
 
 .number:last-child{
-    border-right:none;
+    border:none;
 }
 
 .number strong{
     display:block;
-
     color:var(--teal);
-
     font-size:42px;
+    margin-bottom:5px;
 }
 
 .number span{
     color:var(--gray);
-    font-size:12px;
+    font-size:11px;
 }
 
-/* =========================
-   PROCESS
-========================= */
+
+/* ================= PROCESS ================= */
 
 .process{
     padding:130px 6%;
+    background:#05090a;
 }
 
 .process-grid{
@@ -633,10 +665,9 @@ header{
     position:absolute;
 
     right:-10px;
-    top:55px;
+    top:60px;
 
     width:20px;
-
     height:1px;
 
     background:var(--teal);
@@ -654,17 +685,16 @@ header{
 
     border-radius:50%;
 
-    border:1px solid rgba(17,203,210,.4);
+    border:1px solid rgba(15,209,210,.45);
 
     color:var(--teal);
 
-    font-weight:bold;
-
-    box-shadow:0 0 30px rgba(17,203,210,.08);
+    box-shadow:0 0 30px rgba(15,209,210,.08);
 }
 
 .process-item h3{
     margin-bottom:10px;
+    font-size:15px;
 }
 
 .process-item p{
@@ -673,70 +703,293 @@ header{
     line-height:1.7;
 }
 
-/* =========================
-   CTA
-========================= */
 
-.cta{
-    padding:100px 6%;
+/* ================= PORTFOLIO ================= */
+
+.portfolio{
+    padding:130px 6%;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(15,209,210,.08),
+            transparent 45%
+        ),
+        #071012;
 }
 
-.cta-box{
+.portfolio-box{
     max-width:1250px;
+    min-height:420px;
+
     margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
 
     text-align:center;
 
-    padding:90px 30px;
+    padding:60px 30px;
+
+    border:1px solid rgba(15,209,210,.25);
 
     border-radius:20px;
 
-    border:1px solid rgba(17,203,210,.3);
-
     background:
-    radial-gradient(circle at center,rgba(17,203,210,.14),transparent 55%),
-    #081315;
+        linear-gradient(
+            145deg,
+            rgba(15,209,210,.06),
+            rgba(5,9,10,.8)
+        );
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45),
+        inset 0 0 60px rgba(15,209,210,.025);
+
+    position:relative;
+    overflow:hidden;
 }
 
-.cta-box small{
+.portfolio-box::before{
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    top:-220px;
+    right:-150px;
+
+    background:var(--teal);
+
+    opacity:.08;
+
+    filter:blur(100px);
+
+    border-radius:50%;
+}
+
+.portfolio-box::after{
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    bottom:-180px;
+    left:-100px;
+
+    background:var(--teal);
+
+    opacity:.06;
+
+    filter:blur(90px);
+
+    border-radius:50%;
+}
+
+.portfolio-icon{
+    width:80px;
+    height:80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(15,209,210,.4);
+
+    border-radius:50%;
+
+    color:var(--teal);
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 0 35px rgba(15,209,210,.08);
+}
+
+.portfolio-box h3{
+    font-size:34px;
+
+    margin-bottom:15px;
+
+    position:relative;
+    z-index:2;
+}
+
+.portfolio-box h3 span{
+    color:var(--teal);
+}
+
+.portfolio-box p{
+    max-width:600px;
+
+    color:var(--gray);
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+    position:relative;
+    z-index:2;
+}
+
+.portfolio-note{
+    color:rgba(15,209,210,.65);
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    position:relative;
+    z-index:2;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+    padding:120px 6%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(15,209,210,.12),
+            transparent 45%
+        ),
+        #071012;
+}
+
+.contact-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.contact-text small{
     color:var(--teal);
     letter-spacing:4px;
+    font-size:11px;
     font-weight:bold;
 }
 
-.cta-box h2{
+.contact-text h2{
     font-size:55px;
-    margin:18px 0;
+    line-height:1;
+    margin:18px 0 25px;
 }
 
-.cta-box h2 span{
+.contact-text h2 span{
     color:var(--teal);
 }
 
-.cta-box p{
-    max-width:650px;
-    margin:0 auto 30px;
-
+.contact-text > p{
     color:var(--gray);
+
+    max-width:500px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-item{
+    padding:18px 20px;
+
+    background:rgba(15,209,210,.04);
+
+    border:1px solid rgba(15,209,210,.15);
+
+    border-radius:8px;
+
+    color:#d8e5e6;
+
+    font-size:14px;
+}
+
+.contact-item strong{
+    display:block;
+
+    color:var(--teal);
+
+    font-size:11px;
+
+    margin-bottom:5px;
+
+    letter-spacing:1px;
+}
+
+.contact-card{
+    padding:45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c1c1f,
+            #071012
+        );
+
+    border:1px solid rgba(15,209,210,.3);
+
+    border-radius:15px;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+
+.contact-card h3{
+    font-size:25px;
+    margin-bottom:25px;
+}
+
+.contact-card p{
+    color:var(--gray);
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+
+/* ================= FOOTER ================= */
 
 footer{
     padding:70px 6% 25px;
 
     background:#030607;
 
-    border-top:1px solid rgba(17,203,210,.15);
+    border-top:1px solid rgba(15,209,210,.15);
 }
 
 .footer-grid{
     max-width:1300px;
+
     margin:auto;
 
     display:grid;
+
     grid-template-columns:2fr 1fr 1fr 1fr;
 
     gap:50px;
@@ -780,6 +1033,7 @@ footer{
 
 .footer-bottom{
     max-width:1300px;
+
     margin:50px auto 0;
 
     padding-top:20px;
@@ -787,6 +1041,7 @@ footer{
     border-top:1px solid rgba(255,255,255,.07);
 
     display:flex;
+
     justify-content:space-between;
 
     color:#627678;
@@ -794,9 +1049,8 @@ footer{
     font-size:11px;
 }
 
-/* =========================
-   TABLET
-========================= */
+
+/* ================= TABLET ================= */
 
 @media(max-width:1050px){
 
@@ -818,13 +1072,9 @@ footer{
     }
 
     .hero-image{
-        max-width:800px;
+        max-width:850px;
         width:100%;
         margin:auto;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr 1fr;
     }
 
     .about-container{
@@ -835,8 +1085,8 @@ footer{
         text-align:center;
     }
 
-    .about-text small{
-        display:block;
+    .services-grid{
+        grid-template-columns:1fr 1fr;
     }
 
     .numbers-grid{
@@ -851,19 +1101,21 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
-    .process-item:not(:last-child)::after{
+    .process-item::after{
         display:none;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
     }
 
     .footer-grid{
         grid-template-columns:1fr 1fr;
     }
-
 }
 
-/* =========================
-   MOBILE
-========================= */
+
+/* ================= MOBILE ================= */
 
 @media(max-width:700px){
 
@@ -876,11 +1128,11 @@ footer{
     }
 
     .nav-menu{
-        gap:13px;
+        gap:10px;
     }
 
     .nav-menu a{
-        font-size:10px;
+        font-size:9px;
     }
 
     .nav-contact{
@@ -892,7 +1144,7 @@ footer{
     }
 
     .hero h1{
-        font-size:55px;
+        font-size:54px;
         letter-spacing:-3px;
     }
 
@@ -909,9 +1161,16 @@ footer{
         bottom:15px;
     }
 
+    .hero-image::before{
+        width:350px;
+        height:350px;
+        right:-20px;
+    }
+
     .about,
     .services,
-    .process{
+    .process,
+    .portfolio{
         padding:85px 20px;
     }
 
@@ -939,10 +1198,6 @@ footer{
         padding:50px 20px;
     }
 
-    .numbers-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
     .number strong{
         font-size:32px;
     }
@@ -951,16 +1206,25 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .cta{
-        padding:70px 20px;
+    .portfolio-box{
+        min-height:350px;
+        padding:45px 20px;
     }
 
-    .cta-box{
-        padding:60px 20px;
+    .portfolio-box h3{
+        font-size:28px;
     }
 
-    .cta-box h2{
-        font-size:40px;
+    .contact{
+        padding:85px 20px;
+    }
+
+    .contact-text h2{
+        font-size:42px;
+    }
+
+    .contact-card{
+        padding:30px 22px;
     }
 
     .footer-grid{
@@ -975,20 +1239,16 @@ footer{
         flex-direction:column;
         gap:10px;
     }
-
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -1006,7 +1266,7 @@ footer{
 
         <a href="#services">SERVICES</a>
 
-        <a href="#process">PROCESS</a>
+        <a href="#portfolio">PORTFOLIO</a>
 
         <a href="#contact" class="nav-contact">
             LET'S TALK
@@ -1019,14 +1279,11 @@ footer{
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
 <div class="hero-container">
-
 
     <div class="hero-text">
 
@@ -1041,11 +1298,9 @@ footer{
         </h1>
 
         <p class="hero-description">
-
             We transform ideas into powerful exhibition
             experiences, 3D visualizations, branding and
             digital content that make brands stand out.
-
         </p>
 
         <div class="hero-buttons">
@@ -1054,8 +1309,8 @@ footer{
                 START A PROJECT →
             </a>
 
-            <a href="#services" class="btn btn-border">
-                EXPLORE SERVICES
+            <a href="#portfolio" class="btn btn-border">
+                VIEW PORTFOLIO
             </a>
 
         </div>
@@ -1088,15 +1343,12 @@ footer{
 
     </div>
 
-
 </div>
 
 </section>
 
 
-<!-- =========================
-     MARQUEE
-========================= -->
+<!-- ================= MARQUEE ================= -->
 
 <div class="marquee">
 
@@ -1119,14 +1371,11 @@ footer{
 </div>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
 
 <div class="about-container">
-
 
     <div class="about-image">
 
@@ -1162,81 +1411,44 @@ footer{
             brands connect with their audience.
         </p>
 
-
         <div class="about-points">
 
             <div class="point">
-
-                <strong>
-                    CREATIVE
-                </strong>
-
-                <p>
-                    Fresh ideas built around your brand.
-                </p>
-
+                <strong>CREATIVE</strong>
+                <p>Fresh ideas built around your brand.</p>
             </div>
 
-
             <div class="point">
-
-                <strong>
-                    PREMIUM
-                </strong>
-
-                <p>
-                    Clean and professional visual execution.
-                </p>
-
+                <strong>PREMIUM</strong>
+                <p>Clean and professional visual execution.</p>
             </div>
 
-
             <div class="point">
-
-                <strong>
-                    VISUAL
-                </strong>
-
-                <p>
-                    Powerful 3D and graphic presentation.
-                </p>
-
+                <strong>VISUAL</strong>
+                <p>Powerful 3D and graphic presentation.</p>
             </div>
 
-
             <div class="point">
-
-                <strong>
-                    IMPACT
-                </strong>
-
-                <p>
-                    Designs created to be remembered.
-                </p>
-
+                <strong>IMPACT</strong>
+                <p>Designs created to be remembered.</p>
             </div>
 
         </div>
 
     </div>
 
-
 </div>
 
 </section>
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- ================= SERVICES ================= -->
 
 <section class="services" id="services">
 
 <div class="section-head">
 
-    <small>
-        WHAT WE DO
-    </small>
+    <small>WHAT WE DO</small>
 
     <h2>
         OUR <span>SERVICES</span>
@@ -1255,13 +1467,9 @@ footer{
 
     <div class="service">
 
-        <div class="service-number">
-            01 / 04
-        </div>
+        <div class="service-number">01 / 04</div>
 
-        <div class="service-icon">
-            ◈
-        </div>
+        <div class="service-icon">◈</div>
 
         <h3>
             Exhibition Design
@@ -1278,13 +1486,9 @@ footer{
 
     <div class="service">
 
-        <div class="service-number">
-            02 / 04
-        </div>
+        <div class="service-number">02 / 04</div>
 
-        <div class="service-icon">
-            ◇
-        </div>
+        <div class="service-icon">◇</div>
 
         <h3>
             3D Visualization
@@ -1301,13 +1505,9 @@ footer{
 
     <div class="service">
 
-        <div class="service-number">
-            03 / 04
-        </div>
+        <div class="service-number">03 / 04</div>
 
-        <div class="service-icon">
-            ▶
-        </div>
+        <div class="service-icon">▶</div>
 
         <h3>
             Video Editing
@@ -1324,13 +1524,9 @@ footer{
 
     <div class="service">
 
-        <div class="service-number">
-            04 / 04
-        </div>
+        <div class="service-number">04 / 04</div>
 
-        <div class="service-icon">
-            ✦
-        </div>
+        <div class="service-icon">✦</div>
 
         <h3>
             Graphic Design
@@ -1344,89 +1540,49 @@ footer{
 
     </div>
 
-
 </div>
 
 </section>
 
 
-<!-- =========================
-     NUMBERS
-========================= -->
+<!-- ================= NUMBERS ================= -->
 
 <section class="numbers">
 
 <div class="numbers-grid">
 
-
     <div class="number">
-
-        <strong>
-            3D
-        </strong>
-
-        <span>
-            VISUALIZATION
-        </span>
-
+        <strong>3D</strong>
+        <span>VISUALIZATION</span>
     </div>
 
-
     <div class="number">
-
-        <strong>
-            360°
-        </strong>
-
-        <span>
-            BRAND EXPERIENCE
-        </span>
-
+        <strong>360°</strong>
+        <span>BRAND EXPERIENCE</span>
     </div>
 
-
     <div class="number">
-
-        <strong>
-            100%
-        </strong>
-
-        <span>
-            CREATIVE FOCUS
-        </span>
-
+        <strong>100%</strong>
+        <span>CREATIVE FOCUS</span>
     </div>
 
-
     <div class="number">
-
-        <strong>
-            01
-        </strong>
-
-        <span>
-            CREATIVE PARTNER
-        </span>
-
+        <strong>01</strong>
+        <span>CREATIVE PARTNER</span>
     </div>
-
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     PROCESS
-========================= -->
+<!-- ================= PROCESS ================= -->
 
 <section class="process" id="process">
 
 <div class="section-head">
 
-    <small>
-        OUR PROCESS
-    </small>
+    <small>OUR PROCESS</small>
 
     <h2>
         IDEA TO <span>IMPACT</span>
@@ -1442,16 +1598,11 @@ footer{
 
 <div class="process-grid">
 
-
     <div class="process-item">
 
-        <div class="process-circle">
-            01
-        </div>
+        <div class="process-circle">01</div>
 
-        <h3>
-            DISCOVER
-        </h3>
+        <h3>DISCOVER</h3>
 
         <p>
             Understand the brand, audience,
@@ -1463,13 +1614,9 @@ footer{
 
     <div class="process-item">
 
-        <div class="process-circle">
-            02
-        </div>
+        <div class="process-circle">02</div>
 
-        <h3>
-            CREATE
-        </h3>
+        <h3>CREATE</h3>
 
         <p>
             Develop concepts and creative
@@ -1481,13 +1628,9 @@ footer{
 
     <div class="process-item">
 
-        <div class="process-circle">
-            03
-        </div>
+        <div class="process-circle">03</div>
 
-        <h3>
-            VISUALIZE
-        </h3>
+        <h3>VISUALIZE</h3>
 
         <p>
             Transform the concept into detailed
@@ -1499,13 +1642,9 @@ footer{
 
     <div class="process-item">
 
-        <div class="process-circle">
-            04
-        </div>
+        <div class="process-circle">04</div>
 
-        <h3>
-            IMPACT
-        </h3>
+        <h3>IMPACT</h3>
 
         <p>
             Deliver a final experience designed
@@ -1514,51 +1653,145 @@ footer{
 
     </div>
 
+</div>
+
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="section-head">
+
+    <small>OUR WORK</small>
+
+    <h2>
+        SELECTED <span>PORTFOLIO</span>
+    </h2>
+
+    <p>
+        A showcase of our exhibition designs,
+        3D visualizations, branding and creative work.
+    </p>
+
+</div>
+
+
+<div class="portfolio-box">
+
+    <div class="portfolio-icon">
+        ✦
+    </div>
+
+    <h3>
+        PORTFOLIO <span>COMING SOON</span>
+    </h3>
+
+    <p>
+        We are preparing our project showcase.
+        Exhibition designs, 3D renders and creative
+        projects will be added here soon.
+    </p>
+
+    <div class="portfolio-note">
+        PROJECTS • 3D • EXHIBITIONS • BRANDING
+    </div>
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     CONTACT CTA
-========================= -->
+<!-- ================= CONTACT ================= -->
 
-<section class="cta" id="contact">
+<section class="contact" id="contact">
 
-<div class="cta-box">
-
-    <small>
-        LET'S CREATE SOMETHING GREAT
-    </small>
-
-    <h2>
-        READY TO MAKE AN <span>IMPACT?</span>
-    </h2>
-
-    <p>
-        Tell us about your next exhibition,
-        branding or digital project and let's
-        create something powerful together.
-    </p>
+<div class="contact-container">
 
 
-    <div class="hero-buttons" style="justify-content:center;">
+    <div class="contact-text">
 
-        <a
-            href="https://wa.me/917709331328"
-            target="_blank"
-            class="btn btn-main"
-        >
-            WHATSAPP US →
-        </a>
+        <small>
+            LET'S TALK
+        </small>
 
-        <a
-            href="mailto:visioncraftexpo.com@gmail.com"
-            class="btn btn-border"
-        >
-            SEND EMAIL
-        </a>
+        <h2>
+            HAVE A<br>
+            <span>PROJECT?</span>
+        </h2>
+
+        <p>
+            Tell us about your exhibition, branding,
+            3D design or digital media requirement.
+            Let's create something powerful together.
+        </p>
+
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+
+                <strong>PHONE</strong>
+
+                +91 8928270866
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>PHONE / WHATSAPP</strong>
+
+                +91 7709 331 328
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>EMAIL</strong>
+
+                visioncraftexpo.com@gmail.com
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <h3>
+            Start Your Project
+        </h3>
+
+        <p>
+            Ready to create something impressive?
+            Contact VisionCraft today and let's discuss
+            your next project.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://wa.me/917709331328"
+                target="_blank"
+                class="btn btn-main"
+            >
+                WHATSAPP US →
+            </a>
+
+            <a
+                href="mailto:visioncraftexpo.com@gmail.com"
+                class="btn btn-border"
+            >
+                SEND EMAIL
+            </a>
+
+        </div>
 
     </div>
 
@@ -1567,9 +1800,7 @@ footer{
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1580,7 +1811,7 @@ footer{
 
         <img
             src="logo.png"
-            alt="VisionCraft"
+            alt="VisionCraft Logo"
             class="footer-logo"
         >
 
@@ -1595,18 +1826,12 @@ footer{
 
     <div class="footer-col">
 
-        <h4>
-            NAVIGATION
-        </h4>
+        <h4>NAVIGATION</h4>
 
         <a href="#home">Home</a>
-
         <a href="#about">About</a>
-
         <a href="#services">Services</a>
-
-        <a href="#process">Process</a>
-
+        <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
 
     </div>
@@ -1614,50 +1839,24 @@ footer{
 
     <div class="footer-col">
 
-        <h4>
-            SERVICES
-        </h4>
+        <h4>SERVICES</h4>
 
-        <a href="#services">
-            Exhibition Design
-        </a>
-
-        <a href="#services">
-            3D Visualization
-        </a>
-
-        <a href="#services">
-            Video Editing
-        </a>
-
-        <a href="#services">
-            Graphic Design
-        </a>
+        <a href="#services">Exhibition Design</a>
+        <a href="#services">3D Visualization</a>
+        <a href="#services">Video Editing</a>
+        <a href="#services">Graphic Design</a>
 
     </div>
 
 
     <div class="footer-col">
 
-        <h4>
-            CONTACT
-        </h4>
+        <h4>CONTACT</h4>
 
-        <p>
-            +91 8928270866
-        </p>
-
-        <p>
-            +91 7709 331 328
-        </p>
-
-        <p>
-            visioncraftexpo.com@gmail.com
-        </p>
-
-        <p>
-            India
-        </p>
+        <p>+91 8928270866</p>
+        <p>+91 7709 331 328</p>
+        <p>visioncraftexpo.com@gmail.com</p>
+        <p>India</p>
 
     </div>
 
@@ -1681,5 +1880,4 @@ footer{
 
 
 </body>
-
 </html>
